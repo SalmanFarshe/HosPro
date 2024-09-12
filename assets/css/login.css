@@ -1,0 +1,12 @@
+   .sign{
+            border: 2px black solid;
+            padding: 0%;
+            margin: 5%;
+            margin-left: 35%;
+            margin-right: 35%;
+
+        }
+        .form-check-input:checked{
+            background-color: black;
+            border-color: black;
+        }
