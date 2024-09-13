@@ -43,6 +43,7 @@ form div input{
     font-weight: bold !important;
     border: none !important;
     outline: none !important;   
+    margin-bottom: 15px;
     background-color: var(--box-shadow-color) !important;
 }
 .login-button{
@@ -60,4 +61,9 @@ form div input{
 }
 .pswrdrst:hover{
     color: #ffffff77;
+}
+
+/* for password reset page */
+.backtologin:hover{
+    color: #fffefeb4 !important;
 }

@@ -18,8 +18,8 @@
                     <p>If you are a admin user then click on the admin button and if you are a customer then click on the customer button and enjoy your service!</p>
                 </div>
                 <div class="hospro-inner-right">
-                    <a href="" class="">Customer</a>
-                    <a href="/01.HosPro/pages/signin.php" class="">Admin</a>
+                    <a href="/01.HosPro/pages/log-in.php" class="">Customer</a>
+                    <a href="/01.HosPro/pages/admin.php" class="">Admin</a>
                 </div>
             </div>     
         </div>
