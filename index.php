@@ -1,3 +1,4 @@
+<!-- this file contains the root directory of the system -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

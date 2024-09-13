@@ -1,3 +1,4 @@
+/* these styles goes for index.php */
 @import url(root.css);
 *{
     margin: 0;
@@ -73,11 +74,12 @@
     border: 1px solid var(--box-shadow-color);
     transition: 0.3s;
     font-size: 25px;
-    box-shadow: 1px 1px 20px var(--box-shadow-color);
+    /* box-shadow: 1px 1px 20px var(--box-shadow-color); */
 }
 .hospro-inner-right a:hover{
     background-color: var(--primary-color);
     border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
 @media (max-width: 1024px) {
     .hospro-content-wrapper{
