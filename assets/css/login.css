@@ -21,15 +21,6 @@
     align-items: center;
     align-content: center;
 }
-.login-inner-wrap{
-    background: rgba(112, 185, 207, 0.2);
-    padding: 25px;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
-    border-radius: 8px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
 .form-check-input:checked{
     background-color: black;
     border-color: black;

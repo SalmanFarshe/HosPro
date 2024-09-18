@@ -6,7 +6,7 @@
     font-family: var(--main-font);
 }
 .root-page-wrapper{
-    background-image: url(../img/root-bg.jpeg);
+    background-image: url(../img/hotel-lobby-with-blue-light-strip-on-ceiling-and-rich-colours-for-fruniture.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,73 +19,57 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: var(--box-shadow-color);
+    background-color: rgba(0, 0, 0, 0.644);
 }
 .hospro-content-wrapper{
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 25px;
     column-gap: 50px;
-    height: 500px;
-    width: 900px;
-    background-color: var(--card-background-color);
+    height: auto;
+    width: 350px;
     border-radius: 8px;
     box-shadow: 1px 1px 50px black;
     margin: 25px;
 }
 .hospro-inner-left{
-    margin-top: -25px;
+    padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 300px;
 }
 .hospro-inner-right{
+    padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
     height: 300px;
-    width: 50%;
-    border: 2px solid var(--secondary-color);
+    width: 100%;
     border-radius: 8px;
-    box-shadow: 1px 1px 5px var(--box-shadow-color);
 }
 .hospro-index-logo{
     width: 280px;
     height: auto;
 }
 .hospro-inner-left h1, p{
-    color: var(--text-color);
-    text-align: center;
-}
-.hospro-inner-right a{
     color: var(--text-color-light);
-    text-decoration: none;
-    padding: 20px 35px;
-    margin: 10px;
-    width: 200px;
     text-align: center;
-    background-color: var(--secondary-color);
-    border-radius: 25px;
-    border: 1px solid var(--box-shadow-color);
-    transition: 0.3s;
-    font-size: 25px;
-    /* box-shadow: 1px 1px 20px var(--box-shadow-color); */
 }
-.hospro-inner-right a:hover{
-    background-color: var(--primary-color);
-    border: 1px solid var(--secondary-color);
-    color: var(--secondary-color);
+.hospro-devider{
+    background-color: var(--text-color-light) !important;
+    width: 2px;
+    height: 300px;
+    /* box-shadow: 1px 1px 5px 4px var(--primary-color); */
 }
 @media (max-width: 1024px) {
-    .hospro-content-wrapper{
+    .root-page-inner-wrapper{
         flex-direction: column;
         column-gap: 0px;
-        padding-bottom: 50px;
     }
     .hospro-inner-left{
         margin-top: 0px;

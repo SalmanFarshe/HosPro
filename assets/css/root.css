@@ -19,3 +19,46 @@
   --card-background-color: #1e1e1e;
   --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
+
+.bg-glass{
+  background: rgba(112, 185, 207, 0.2);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 8px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.button{
+  cursor: pointer;
+  padding: 15px 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+
+  background: rgba(13, 44, 75, 0.15);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(30, 144, 255, 0.29);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transition: 0.3s !important;
+  margin: 10px 0;
+}
+.button_link{
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text-color-light);
+  text-transform: uppercase;
+}
+/* Button Hover Effect */
+.button:hover {
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+    letter-spacing: 5px;
+    transition: 0.3s all ease-in-out;
+    background: rgba(0, 0, 0, 0.575);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(30, 144, 255, 0.29);
+}

@@ -11,7 +11,7 @@
   <body>
     <section class="logIn">
       <div class="logIn-wrap">
-        <div class="login-inner-wrap w-50">
+        <div class="login-inner-wrap bg-glass p-4 w-50">
           <h2 class="text-center">Create New Account</h2>
           <div class="">
             <form class="row g-3">

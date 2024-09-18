@@ -10,7 +10,7 @@
   <body>
     <section class="logIn">
       <div class="logIn-wrap">
-        <div class="login-inner-wrap w-25">
+        <div class="login-inner-wrap bg-glass p-4 w-25">
           <div class="">
             <form class="row g-3">
               <div class="col-12">

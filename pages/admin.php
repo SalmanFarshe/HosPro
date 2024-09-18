@@ -10,14 +10,10 @@
   <body>
     <section class="logIn">
       <div class="logIn-wrap">
-        <div class="login-inner-wrap w-25">
+        <div class="login-inner-wrap bg-glass p-4 w-25">
           <h2 class="text-center">Admin Login</h2>
           <div class="">
             <form class="row g-3">
-              <div class="col-12">
-                <label for="inputEmail4" class="form-label">Email / Username</label>
-                <input type="email" class="form-control" id="inputEmail4" required>
-              </div>
               <div class="col-12">
                 <label for="inputPassword4" class="form-label">Password</label>
                 <input type="password" class="form-control" id="inputPassword4" required>
