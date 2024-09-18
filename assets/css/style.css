@@ -1,10 +1,103 @@
+/* these styles goes for index.php */
+@import url(root.css);
 *{
     margin: 0;
     padding: 0;
+    font-family: var(--main-font);
 }
-.log-in-role{
-    height: 80%;
-    width: 80%;
-    background-color: aqua;
+.root-page-wrapper{
+    background-image: url(../img/root-bg.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.root-page-inner-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-shadow-color);
+}
+.hospro-content-wrapper{
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    column-gap: 50px;
+    height: 500px;
+    width: 900px;
+    background-color: var(--card-background-color);
+    border-radius: 8px;
+    box-shadow: 1px 1px 50px black;
+    margin: 25px;
+}
+.hospro-inner-left{
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.hospro-inner-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 300px;
+    width: 50%;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px var(--box-shadow-color);
+}
+.hospro-index-logo{
+    width: 280px;
+    height: auto;
+}
+.hospro-inner-left h1, p{
+    color: var(--text-color);
     text-align: center;
+}
+.hospro-inner-right a{
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 20px 35px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    border: 1px solid var(--box-shadow-color);
+    transition: 0.3s;
+    font-size: 25px;
+    /* box-shadow: 1px 1px 20px var(--box-shadow-color); */
+}
+.hospro-inner-right a:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+@media (max-width: 1024px) {
+    .hospro-content-wrapper{
+        flex-direction: column;
+        column-gap: 0px;
+        padding-bottom: 50px;
+    }
+    .hospro-inner-left{
+        margin-top: 0px;
+    }   
+    .hospro-inner-left p{
+        display: none;
+    }
+    .hospro-inner-right{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .hospro-inner-right a{
+        width: 100px;
+    }
 }

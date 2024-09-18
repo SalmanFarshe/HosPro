@@ -1,1 +1,21 @@
 /* the color theme gose here */
+:root {
+  /* Light Theme Variables */
+  --background-color: #FFFFFF;
+  --text-color: #3C4171;
+  --text-color-light: #ffffff;
+  --primary-color: #00ADEF;
+  --secondary-color: #24265D;
+  --card-background-color: #f8f9fa;
+  --box-shadow-color: rgba(0, 0, 0, 0.479);
+  --main-font: 'Poppins', sans-serif;
+}
+.dark-theme {
+  /* Dark Theme Variables */
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
+  --secondary-color: #b0bec5;
+  --card-background-color: #1e1e1e;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+}
