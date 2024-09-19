@@ -1,14 +1,28 @@
 /* the color theme gose here */
 :root {
   /* Light Theme Variables */
-  --background-color: #FFFFFF;
-  --text-color: #3C4171;
+  --background-color: #ffffff;
+  --text-color: #3c4171;
   --text-color-light: #ffffff;
-  --primary-color: #00ADEF;
-  --secondary-color: #24265D;
+  --primary-color: #00adef;
+  --secondary-color: #24265d;
   --card-background-color: #f8f9fa;
   --box-shadow-color: rgba(0, 0, 0, 0.479);
-  --main-font: 'Poppins', sans-serif;
+  --main-font: "Poppins", sans-serif;
+}
+body {
+  background-image: url(../img/hotel-lobby-with-blue-light-strip-on-ceiling-and-rich-colours-for-fruniture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body::after{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--box-shadow-color);
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 .dark-theme {
   /* Dark Theme Variables */
@@ -19,19 +33,24 @@
   --card-background-color: #1e1e1e;
   --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
-
-.bg-glass{
+.bg-glass {
   background: rgba(112, 185, 207, 0.2);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
-  border-radius: 8px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
-.button{
+.card-bg-glass {
+  background: rgba(79, 92, 202, 0.384);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--background-color);
+}
+.button {
   cursor: pointer;
-  padding: 15px 50px;
+  padding: 10px 10px;
   font-size: 18px;
   border: none;
   border-radius: 8px;
@@ -46,19 +65,22 @@
   transition: 0.3s !important;
   margin: 10px 0;
 }
-.button_link{
+.button_link {
   text-decoration: none;
   font-size: 18px;
   color: var(--text-color-light);
   text-transform: uppercase;
 }
+.button_link:hover{
+  color: var(--background-color);
+}
 /* Button Hover Effect */
 .button:hover {
-    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
-    letter-spacing: 5px;
-    transition: 0.3s all ease-in-out;
-    background: rgba(0, 0, 0, 0.575);
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(7px);
-    border: 1px solid rgba(30, 144, 255, 0.29);
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  transition: 0.3s all ease-in-out;
+  background: rgba(0, 0, 0, 0.575);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(30, 144, 255, 0.29);
 }

@@ -1,0 +1,25 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+.dashboard-app {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+/* media query */
+@media (max-width: 992px) {
+  .dashboard-app {
+    margin-left: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .dashboard-app {
+    margin-left: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard-app {
+    margin-left: 245px;
+  }
+}
