@@ -10,28 +10,52 @@
     <div class="dashboard">
         <?php require_once('../public/sidenav.php'); ?>
         <div class="dashboard-app">
-            <div class="card card-bg-glass">
-                <div class="card-header">
-                    Quote
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                    <p>A well-known quote, contained in a blockquote element.</p>
-                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                    </blockquote>
-                </div>
-            </div>
-            <br><br>
-            <div class="card card-bg-glass" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <button class="button">
-                        <a href="#" class="button_link">Go somewhere</a>
+            <div class="container mt-5">
+                <!-- Header with Add New Employee Button -->
+                <div class="d-flex justify-content-between mb-4">
+                    <h2>Employee Management</h2>
+                    <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">
+                        <a href="#" class="button_link">
+                            Add New Employee
+                        </a>
                     </button>
                 </div>
+
+                <!-- Search and Filter Section -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Search Employee" id="searchEmployee">
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select" id="filterPosition">
+                            <option selected>Filter by Position</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Receptionist">Receptionist</option>
+                            <option value="Housekeeping">Housekeeping</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Employee List Table -->
+                <div class="table-responsive">
+                    <?php require_once("../public/components/list-employee.php"); ?>
+                </div>
             </div>
-        
+
+            <!-- Add Employee Modal -->
+            <?php require_once("../public/modals/add-employee.php"); ?>
+            
+            <!-- Edit Employee Modal -->
+            <?php require_once("../public/modals/edit-employee.php"); ?>
+            
+
+            <!-- View Employee Profile Modal -->
+            <?php require_once("../public/modals/view-employee.php"); ?>
+            
+            <!-- Employee Performance Review Modal -->
+            <?php require_once("../public/modals/review-employee.php"); ?>
+            
+
         </div>
     </div>
     <script src="../assets/js/app.js"></script>
