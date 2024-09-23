@@ -19,8 +19,9 @@ body {
   background-color: var(--text-color) !important;
   color: var(--text-color-light) !important;
 }
+
+/* Dark Theme Variables */
 .dark-theme {
-  /* Dark Theme Variables */
   --background-color: #121212;
   --text-color: #ffffff;
   --primary-color: #1e90ff;
@@ -28,6 +29,8 @@ body {
   --card-background-color: #1e1e1e;
   --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
+
+/* common style for glasmorpphism */
 .bg-glass {
   background: rgba(112, 185, 207, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -35,6 +38,8 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+/* common style for card */
 .card-bg-glass {
   background: rgba(112, 185, 207, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -43,18 +48,19 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: var(--background-color);
 }
+
+/* common style for buttons */
 .button {
   cursor: pointer;
-  padding: 10px 10px;
-  font-size: 18px;
+  padding: 6px 10px;
   border: none;
   border-radius: 8px;
 
-  background: rgba(13, 44, 75, 0.15);
   backdrop-filter: blur(50px);
+  background: var(--primary-color);
   -webkit-backdrop-filter: blur(7px);
   border: 1px solid rgba(30, 144, 255, 0.29);
-
+  
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   color: #fff;
   transition: 0.3s !important;
@@ -62,20 +68,46 @@ body {
 }
 .button_link {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
+  color: var(--text-color);
+  font-weight: bold;
+  padding: 0px 10px;
+}
+.button:hover .button_link{
   color: var(--text-color-light);
-  text-transform: uppercase;
 }
-.button_link:hover{
-  color: var(--background-color);
-}
-/* Button Hover Effect */
 .button:hover {
+  background: var(--secondary-color);
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
-  letter-spacing: 1px;
   transition: 0.3s all ease-in-out;
-  background: rgba(0, 0, 0, 0.575);
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(7px);
   border: 1px solid rgba(30, 144, 255, 0.29);
+}
+
+/* common css for input styles */
+.frm-label{
+    color: var(--primary-color) !important;
+    margin-bottom: 5px !important;
+    font-weight: bold !important;
+}
+.frm-input{
+    color: var(--primary-color) !important;
+    font-weight: bold !important;
+    border: none !important;
+    outline: none !important;   
+    margin-bottom: 10px !important;
+    padding-left: 10px;
+    display: block !important;
+    background-color: var(--box-shadow-color) !important;
+    width: 100% !important;
+    height: 40px !important;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color) !important;
+}
+
+/* common close button */
+.btn-close{
+  background-color: var(--background-color) !important;
+  opacity: 1;
 }

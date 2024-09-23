@@ -1,0 +1,18 @@
+@import url(root.css);
+.search-emp{
+    background-color: rgba(128, 128, 128, 0.24) !important;
+    outline: none;
+    border: 0.5px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+.select-pos{
+    font-weight: bold;
+    color: var(--primary-color);
+    border: 0.5px solid var(--primary-color);
+    background-color: rgba(128, 128, 128, 0.24) !important;
+}
+.select-pos option{
+    color: black;
+}

@@ -13,19 +13,6 @@
         <!-- Content -->
         <div class='dashboard-app'>
             <div class='dashboard-content'>
-                <div class=''>
-                    <div class='card card-bg-glass'>
-                        <div class='card-header'>
-                            <h1>Welcome Back Mr.Salman F Zihad</h1>
-                        </div>
-                        <div class='card-body'>
-                            <p>Your account type is: <b>
-                                    Administrator
-                                </b></p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Sub Content -->
                 <div class="row">
 

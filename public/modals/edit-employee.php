@@ -8,22 +8,26 @@
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <label for="editEmployeeName" class="form-label">Employee Name</label>
-                        <input type="text" class="form-control" id="editEmployeeName" required>
+                        <label for="editEmployeeName" class="frm-label form-label">Employee Name</label>
+                        <input type="text" class="form-control frm-input" id="editEmployeeName" required>
                     </div>
                     <div class="mb-3">
-                        <label for="editEmployeePosition" class="form-label">Position</label>
-                        <input type="text" class="form-control" id="editEmployeePosition" required>
+                        <label for="editEmployeePosition" class="frm-label form-label">Position</label>
+                        <input type="text" class="form-control frm-input" id="editEmployeePosition" required>
                     </div>
                     <div class="mb-3">
-                        <label for="editEmployeeEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="editEmployeeEmail" required>
+                        <label for="editEmployeeEmail" class="frm-label form-label">Email</label>
+                        <input type="email" class="form-control frm-input" id="editEmployeeEmail" required>
                     </div>
                     <div class="mb-3">
-                        <label for="editEmployeeSalary" class="form-label">Salary</label>
-                        <input type="number" class="form-control" id="editEmployeeSalary" required>
+                        <label for="editEmployeeSalary" class="frm-label form-label">Salary</label>
+                        <input type="number" class="form-control frm-input" id="editEmployeeSalary" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Update Employee</button>
+                    <button type="submit" class="button w-100">
+                        <a href="" class="button_link">
+                            Update Employee
+                        </a>
+                    </button>
                 </form>
             </div>
         </div>

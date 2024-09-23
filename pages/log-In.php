@@ -15,17 +15,17 @@
           <div class="">
             <form class="row g-3">
               <div class="col-12">
-                <label for="inputEmail4" class="form-label">Email / Username</label>
-                <input type="email" class="form-control" id="inputEmail4" required>
+                <label for="inputEmail4" class="form-label frm-label">Email / Username</label>
+                <input type="email" class="form-control frm-input" id="inputEmail4" required>
               </div>
               <div class="col-12">
-                <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" required>
+                <label for="inputPassword4" class="form-label frm-label">Password</label>
+                <input type="password" class="form-control frm-input" id="inputPassword4" required>
               </div>                
               <div class="col-12 d-flex justify-content-between">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="gridCheck">
-                  <label class="form-check-label" for="gridCheck">
+                  <label class="form-check-label frm-label" for="gridCheck">
                     Remember me
                   </label>
                 </div>

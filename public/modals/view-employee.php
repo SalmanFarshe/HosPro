@@ -8,7 +8,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="employee-photo.jpg" alt="Employee Photo" class="img-fluid rounded">
+                        <img src="../../../01.HosPro/assets/img/Dark-Logo_HosPro.png" alt="Employee Photo" class="img-fluid rounded">
                     </div>
                     <div class="col-md-8">
                         <h3>John Doe</h3>

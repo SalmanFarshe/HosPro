@@ -17,38 +17,38 @@
             <form class="row g-3">
               <div class="col-6 form-left-part">
                 <div class="col-12">
-                  <label for="frstnm" class="form-label">First Name</label>
-                  <input type="text" class="form-control" id="frstnm" required>
+                  <label for="frstnm" class="form-label frm-label">First Name</label>
+                  <input type="text" class="form-control frm-input" id="frstnm" required>
                 </div>
                 <div class="col-12">
-                  <label for="lstnm" class="form-label">Last Name</label>
-                  <input type="text" class="form-control" id="lstnm" required>
+                  <label for="lstnm" class="form-label frm-label">Last Name</label>
+                  <input type="text" class="form-control frm-input" id="lstnm" required>
                 </div>
                 <div class="col-12">
-                  <label for="usrnm" class="form-label">User Name</label>
-                  <input type="text" class="form-control" id="usrnm" required>
+                  <label for="usrnm" class="form-label frm-label">User Name</label>
+                  <input type="text" class="form-control frm-input" id="usrnm" required>
                 </div>
                 <div class="col-12">
-                  <label for="pswrd" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="pswrd" required>
+                  <label for="pswrd" class="form-label frm-label">Password</label>
+                  <input type="password" class="form-control frm-input" id="pswrd" required>
                 </div>
               </div>
               <div class="col-6 form-right-part">
                 <div class="col-12">
-                  <label for="dob" class="form-label">Date Of Birth</label>
-                  <input type="date" class="form-control" id="dob" required>
+                  <label for="dob" class="form-label frm-label">Date Of Birth</label>
+                  <input type="date" class="form-control frm-input" id="dob" required>
                 </div>
                 <div class="col-12">
-                  <label for="nidnum" class="form-label">NID Number</label>
-                  <input type="number" class="form-control" id="nidnum" required>
+                  <label for="nidnum" class="form-label frm-label">NID Number</label>
+                  <input type="number" class="form-control frm-input" id="nidnum" required>
                 </div>
                 <div class="col-12">
-                    <label for="phnnum" class="form-label">Phone Number</label>
-                    <input type="number" class="form-control" id="phnnum" required>
+                    <label for="phnnum" class="form-label frm-label">Phone Number</label>
+                    <input type="number" class="form-control frm-input" id="phnnum" required>
                 </div>  
                 <div class="col-12">
-                    <label for="addrs" class="form-label">Address</label>
-                    <input type="" class="form-control" id="addrs" required>
+                    <label for="addrs" class="form-label frm-label">Address</label>
+                    <input type="" class="form-control frm-input" id="addrs" required>
                 </div>  
 
               </div>                
