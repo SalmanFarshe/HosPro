@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emploee | HosPro</title>
+    <title>Events | HosPro</title>
     <?php require_once('../src/components/links.php'); ?>
     <link rel="stylesheet" href="../assets/css/employee.css">
 </head>
@@ -40,25 +40,12 @@
 
                 <!-- Employee List Table -->
                 <div class="table-responsive">
-                    <?php require_once("../src/components/list-employee.php"); ?>
+                    <?php require_once("../public/components/list-employee.php"); ?>
                 </div>
             </div>
 
             <!-- Add Employee Modal -->
-            <?php require_once("../src/modals/add-employee.php"); ?>
-            
-            <!-- Edit Employee Modal -->
-            <?php require_once("../src/modals/edit-employee.php"); ?>
-            
-
-            <!-- View Employee Profile Modal -->
-            <?php require_once("../src/modals/view-employee.php"); ?>
-            
-            <!-- Employee Performance Review Modal -->
-            <?php require_once("../src/modals/review-employee.php"); ?>
-
-            <!-- Employee delete Modal -->
-            <?php require_once("../src/modals/delete-employee.php"); ?>
+            <?php require_once("../public/modals/add-employee.php"); ?>
             
 
         </div>

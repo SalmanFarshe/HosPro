@@ -18,9 +18,9 @@
             <i class="fa-solid fa-user-tie"></i>
             Employee
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="../pages/events.php" class="dashboard-nav-item">
             <i class="fa-solid fa-calendar-days"></i>
-            Events Mapping
+            All Events
         </a>
         <a href="#" class="dashboard-nav-item">
             <i class="fa-solid fa-users"></i>

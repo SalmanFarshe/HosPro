@@ -69,7 +69,7 @@ body {
 .button_link {
   text-decoration: none;
   font-size: 17px;
-  color: var(--text-color);
+  color: var(--text-color-light);
   font-weight: bold;
   padding: 0px 10px;
 }

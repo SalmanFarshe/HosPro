@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard | HosPro</title>
     <link rel="stylesheet" href="../assets/css/dash.css">
-    <?php require_once('../public/links.php'); ?>
+    <?php require_once('../src/components/links.php'); ?>
 </head>
 <body>
     <div class='dashboard'>
-        <?php require_once('../public/sidenav.php'); ?>
+        <?php require_once('../src/components/sidenav.php'); ?>
         <!-- Content -->
         <div class='dashboard-app'>
             <div class='dashboard-content'>
@@ -91,17 +91,11 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
-    </div>
-        
+    </div> 
     <script src="../assets/js/chart.js"></script>
     <script src="../assets/js/app.js"></script>
 </body>
-
 </html>
