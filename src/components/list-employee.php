@@ -19,7 +19,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>
@@ -32,7 +32,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>
@@ -45,7 +45,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>
@@ -58,7 +58,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>
@@ -71,7 +71,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>
@@ -84,7 +84,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>
@@ -97,7 +97,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>
@@ -110,7 +110,7 @@
             <td>Present</td>
             <td class="d-flex justify-content-between">
                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEmployeeModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
                 <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
                 <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
             </td>

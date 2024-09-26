@@ -26,7 +26,7 @@
             <i class="fa-solid fa-users"></i>
             All Users
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="../pages/packages.php" class="dashboard-nav-item">
             <i class="fa-solid fa-clipboard-list"></i>
             Packages
         </a>

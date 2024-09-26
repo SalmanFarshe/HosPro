@@ -5,49 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | HosPro</title>
     <?php require_once('../src/components/links.php'); ?>
-    <link rel="stylesheet" href="../assets/css/employee.css">
+    <link rel="stylesheet" href="../assets/css/events.css">
 </head>
 <body>
     <div class="dashboard">
         <?php require_once('../src/components/sidenav.php'); ?>
         <div class="dashboard-app">
             <div class="container">
-                <!-- Header with Add New Employee Button -->
                 <div class="d-flex justify-content-center mb-4">
-                    <h2>Employee Management</h2>
+                    <h2>Events Management</h2>
                 </div>
-                <!-- Search and Filter Section -->
-                <div class="row mb-4 align-items-center justify-content-between">
-                    <div class="col-md-5">
-                        <select class="form-select select-pos" id="filterPosition">
-                            <option selected>Filter by Position</option>
-                            <option value="Manager">Manager</option>
-                            <option value="Receptionist">Receptionist</option>
-                            <option value="Housekeeping">Housekeeping</option>
+                <div class="row mt-4 align-items-center">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control search-event" placeholder="Search events..." id="searchEvent">
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select select-cat" id="filterCategory">
+                            <option value="">All Categories</option>
+                            <option value="conference">Conference</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="seminar">Seminar</option>
                         </select>
                     </div>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control search-emp" placeholder="Search Employee" id="searchEmployee">
+                    <div class="col-md-3">
+                        <select class="form-select select-sts" id="filterStatus">
+                            <option value="">All Status</option>
+                            <option value="upcoming">Upcoming</option>
+                            <option value="ongoing">Ongoing</option>
+                            <option value="completed">Completed</option>
+                        </select>
                     </div>
-                    <div class="col-md-2">
-                        <button type="button" class="button float-end" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">
+                    <div class="col-md-3 text-end">
+                        <button class="button w-100" data-bs-toggle="modal" data-bs-target="#addEventModal">
                             <a href="#" class="button_link">
-                                Add New
+                                Add Event
                             </a>
                         </button>
                     </div>
                 </div>
 
-                <!-- Employee List Table -->
-                <div class="table-responsive">
-                    <?php require_once("../public/components/list-employee.php"); ?>
-                </div>
+                <!-- Event List -->
+                <?php require_once("../src/components/event-list.php"); ?>
+                 
             </div>
-
-            <!-- Add Employee Modal -->
-            <?php require_once("../public/modals/add-employee.php"); ?>
-            
-
+                <!-- Add Event Modal -->
+                <?php require_once("../src/modals/add-event.php"); ?>
+                <!-- Edit Event Modal -->
+                <?php require_once("../src/modals/edit-event.php"); ?>
+                <!-- Delete Event -->
+                <?php require_once("../src/modals/check-password.php"); ?>
+                <!-- Event Details -->
+                <?php require_once("../src/modals/event-details.php"); ?>
+            </div>
         </div>
     </div>
     <script src="../assets/js/app.js"></script>

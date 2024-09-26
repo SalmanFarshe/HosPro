@@ -43,24 +43,16 @@
                     <?php require_once("../src/components/list-employee.php"); ?>
                 </div>
             </div>
-
             <!-- Add Employee Modal -->
             <?php require_once("../src/modals/add-employee.php"); ?>
-            
             <!-- Edit Employee Modal -->
             <?php require_once("../src/modals/edit-employee.php"); ?>
-            
-
             <!-- View Employee Profile Modal -->
             <?php require_once("../src/modals/view-employee.php"); ?>
-            
             <!-- Employee Performance Review Modal -->
             <?php require_once("../src/modals/review-employee.php"); ?>
-
             <!-- Employee delete Modal -->
-            <?php require_once("../src/modals/delete-employee.php"); ?>
-            
-
+            <?php require_once("../src/modals/check-password.php"); ?>
         </div>
     </div>
     <script src="../assets/js/app.js"></script>
