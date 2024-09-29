@@ -22,7 +22,7 @@
             <i class="fa-solid fa-calendar-days"></i>
             All Events
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="../pages/allusers.php" class="dashboard-nav-item">
             <i class="fa-solid fa-users"></i>
             All Users
         </a>
@@ -30,7 +30,7 @@
             <i class="fa-solid fa-clipboard-list"></i>
             Packages
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="../pages/billandpayments.php" class="dashboard-nav-item">
             <i class="fa-regular fa-credit-card"></i>
             Bill & Payments
         </a>

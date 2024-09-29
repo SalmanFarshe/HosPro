@@ -1,8 +1,6 @@
-// Line Chart
+// charts for dashboard
 document.addEventListener("DOMContentLoaded", function () {
     var ctx = document.getElementById('myLineChart').getContext('2d');
-
-    // Line chart configuration
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -24,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-// Bar Chart
 var ctx = document.getElementById('myBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
     type: 'bar',
