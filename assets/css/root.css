@@ -113,8 +113,27 @@ body {
 }
 
 /* common placeholder */
-/* Change placeholder color */
 input::placeholder {
     color: var(--primary-color) !important;
     opacity: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bs-primary);
+    border-radius: 10px; 
+    border: 3px solid #f1f1f1;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bs-primary) #f1f1f1;
 }
