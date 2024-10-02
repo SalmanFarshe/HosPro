@@ -1,122 +1,132 @@
-<div class="table-container">
-    <table class="table card-bg-glass">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Booking Id</th>
-                <th>Phone No.</th>
-                <th>Address</th>
-                <th>Payment</th>
-                <th>Status</th>
-            </tr>
+<table class="table card-bg-glass">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Air John Doe</td>
-                <td>john@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Bir Jane Smith</td>
-                <td>jane@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Cir John Doe</td>
-                <td>john@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Dir Jane Smith</td>
-                <td>jane@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>John Doe</td>
-                <td>john@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Jane Smith</td>
-                <td>jane@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Zi John Doe</td>
-                <td>john@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Xin Jane Smith</td>
-                <td>jane@example.com</td>
-                <td>000101</td>
-                <td>01234567890</td>
-                <td>ashulia ,savar</td>
-                <td>
-                    paid : 1500 <br>
-                    due : 1500
-                </td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+        <!-- Employee Rows (To be dynamically populated) -->
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Mr. Salman</td>
+            <td>salman@gmail.com</td>
+            <td>+880 1234567989</td>
+            <td>Ashulia,Savar,Dhaka</td>
+            <td>Present</td>
+            <td class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
+                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</button>
+                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">Review</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
