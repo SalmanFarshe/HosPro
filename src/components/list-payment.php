@@ -42,26 +42,5 @@
             <td>1500 </td>
             <td>3000 </td>
         </tr>
-        <tr>
-            <td>1014</td>
-            <td>4</td>
-            <td>Dir John Doe</td>
-            <td>Dir_john@gmail.com</td>
-            <td>01234567890</td>
-            <td>1500 </td>
-            <td>1500 </td>
-            <td>3000 </td>
-        </tr>
-        <tr>
-            <td>1015</td>
-            <td>5</td>
-            <td>John Doe</td>
-            <td>john@gmail.com</td>
-            <td>01234567890</td>
-            <td>1500 </td>
-            <td>1500 </td>
-            <td>3000 </td>
-        </tr>
-
     </tbody>
 </table>

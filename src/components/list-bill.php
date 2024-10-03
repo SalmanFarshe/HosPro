@@ -30,26 +30,5 @@
             <td>1500 </td>
             <td>3000 </td>
         </tr>
-        <tr>
-            <td>1011</td>
-            <td>Parking</td>
-            <td>1500 </td>
-            <td>1500 </td>
-            <td>3000 </td>
-        </tr>
-        <tr>
-            <td>1011</td>
-            <td>Maintanance</td>
-            <td>1500 </td>
-            <td>1500 </td>
-            <td>3000 </td>
-        </tr>
-        <tr>
-            <td>1011</td>
-            <td>Maintanance</td>
-            <td>1500 </td>
-            <td>1500 </td>
-            <td>3000 </td>
-        </tr>
     </tbody>
 </table>

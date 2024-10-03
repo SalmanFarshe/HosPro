@@ -51,7 +51,7 @@
             <!-- View User Profile Modal -->
             <?php require_once("../src/modals/view-user.php"); ?>
             <!-- User delete Modal -->
-            <?php require_once("../src/modals/delete-user.php"); ?>
+            <?php require_once("../src/modals/check-password.php"); ?>
             <!-- User Review Modal -->
             <?php require_once("../src/modals/user-review.php"); ?>
         </div>

@@ -66,6 +66,22 @@ body {
   transition: 0.3s !important;
   margin: 10px 0;
 }
+.button2 {
+  cursor: pointer;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+
+  backdrop-filter: blur(50px);
+  background: var(--secondary-color);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(30, 144, 255, 0.29);
+  
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transition: 0.3s !important;
+  margin: 10px 10px;
+}
 .button_link {
   text-decoration: none;
   font-size: 17px;
@@ -74,6 +90,9 @@ body {
   padding: 0px 10px;
 }
 .button:hover .button_link{
+  color: var(--text-color-light);
+}
+.button2:hover .button_link{
   color: var(--text-color-light);
 }
 .button:hover {
