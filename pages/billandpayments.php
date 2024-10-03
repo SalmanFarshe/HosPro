@@ -14,7 +14,7 @@
             <!-- Payments list  -->
             <div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-sm-12 col-lg-8">
                         <!-- search payments -->
                         <form class="" action="your-server-side-script" method="GET">
                             <label for="search">Search All the payments:</label>
@@ -23,7 +23,7 @@
                             <input type="submit" class="button" value="Search">
                         </form>
                         <!-- payments table -->
-                        <div class="table-container">
+                        <div class="table-responsive">
                             <?php require_once("../src/components/list-payment.php"); ?>
                         </div>
                         <!-- payments pagination -->
@@ -46,10 +46,10 @@
                         </nav>
                     </div>
                     <!-- payments chart -->
-                    <div class="col-4">
+                    <div class="col-sm-12 col-lg-4">
                         <div class="col">
-                            <div class="card-bg-glass mb-3">
-                                <canvas id="myBarChart"></canvas>
+                            <div class="card-bg-glass mb-3 p-3">
+                                <canvas id="myBarChart" width="400" height="350"></canvas>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                 
                 <!-- bills list -->
                 <div class="row mt-5">
-                    <div class="col-8">
+                    <div class="col-sm-12 col-lg-8">
                         <!-- search bills -->
                         <form class="" action="your-server-side-script" method="GET">
                             <label for="search">Search all bills:</label>
@@ -90,11 +90,11 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-12 col-lg-4">
                         <div class="col">
                             <div class="card-bg-glass my-3">
                                 <!-- Pie chart will be rendered on this canvas -->
-                                <canvas id="myPieChart" class="card-img-top" width="400" height="200"></canvas>
+                                <canvas id="myPieChart" class="card-img-top p-2" width="400" height="350"></canvas>
                             </div>
                         </div>
                     </div>
