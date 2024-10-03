@@ -51,9 +51,6 @@
                             <div class="card-bg-glass mb-3">
                                 <canvas id="myBarChart"></canvas>
                             </div>
-                            <div class="card-bg-glass">
-                                <canvas id="myBarChart"></canvas>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,10 +96,6 @@
                                 <!-- Pie chart will be rendered on this canvas -->
                                 <canvas id="myPieChart" class="card-img-top" width="400" height="200"></canvas>
                             </div>
-                            <div class="card-bg-glass my-3">
-                                <!-- Pie chart will be rendered on this canvas -->
-                                <canvas id="myPieChart" class="card-img-top" width="400" height="200"></canvas>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,6 +103,7 @@
         </div>
     </div>
     <script src="../assets/js/chart.js"></script>
+    
     <script>
         // charts for billandpayment page
         // bar chart
