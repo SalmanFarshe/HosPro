@@ -15,10 +15,8 @@
             <div class='dashboard-content'>
                 <!-- Sub Content -->
                 <div class="row">
-
                     <div class="col-4">
                         <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2 g-3 ">
-
                             <div class="col">
                                 <div class="card card-bg-glass my-3" style="max-width: 25rem; max-height: 25rem;">
                                     <div class="card-header fw-bold">All Users</div>
@@ -73,16 +71,12 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="col-8">
-
                         <div class="col">
                             <div class="card card-bg-glass my-3">
                                 <canvas id="myLineChart" class="card-img-top"></canvas>
-
                             </div>
                         </div>
                         <div class="col">

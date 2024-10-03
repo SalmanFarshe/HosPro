@@ -1,0 +1,12 @@
+.customiser_wrapper{
+    height: 500px;
+}
+.customiser_nav_wrapper{
+      background: rgba(112, 185, 207, 0.2);
+}
+.nav-pills > button{
+    color: var(--primary-color);
+}
+.nav-pills > button:hover{
+    color: var(--text-color-light);
+}

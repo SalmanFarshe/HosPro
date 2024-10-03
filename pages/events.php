@@ -43,10 +43,8 @@
                         </button>
                     </div>
                 </div>
-
                 <!-- Event List -->
                 <?php require_once("../src/components/event-list.php"); ?>
-                 
             </div>
                 <!-- Add Event Modal -->
                 <?php require_once("../src/modals/add-event.php"); ?>

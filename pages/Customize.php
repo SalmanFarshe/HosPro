@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emploee | HosPro</title>
     <?php require_once('../src/components/links.php'); ?>
-    <link rel="stylesheet" href="../assets/css/billandpayment.css">
+    <link rel="stylesheet" href="../assets/css/customize.css">
 </head>
-
 <body>
     <div class="dashboard">
         <?php require_once('../src/components/sidenav.php'); ?>
         <div class="dashboard-app">
             <div class="container mt-5">
-                <div class="row">
+                <div class="row customiser_wrapper card-bg-glass">
                     <!-- Vertical Tabs Navigation -->
-                    <div class="col-md-3 card-bg-glass pt-3">
+                    <div class="col-md-3 pt-3 customiser_nav_wrapper">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-
                             <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true">
                                 Profile
                             </button>
-
                             <button class="nav-link" id="v-pills-general-tab" data-bs-toggle="pill" data-bs-target="#v-pills-general" type="button" role="tab" aria-controls="v-pills-general" aria-selected="false">
                                 General Info
                             </button>
-
                             <button class="nav-link" id="v-pills-password-tab" data-bs-toggle="pill" data-bs-target="#v-pills-password" type="button" role="tab" aria-controls="v-pills-password" aria-selected="false">
                                 Password & Email
                             </button>
-
                             <button class="nav-link" id="v-pills-logo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-logo" type="button" role="tab" aria-controls="v-pills-logo" aria-selected="false">
                                 Logo Update
                             </button>
-
                             <button class="nav-link" id="v-pills-receptionist-tab" data-bs-toggle="pill" data-bs-target="#v-pills-receptionist" type="button" role="tab" aria-controls="v-pills-receptionist" aria-selected="false">
                                 Receptionist Info
                             </button>
-
                         </div>
                     </div>
-
                     <!-- Tab Content -->
                     <div class="col-md-9">
                         <div class="tab-content" id="v-pills-tabContent">
                             <!-- Profile Tab -->
-                            <div class="tab-pane card-bg-glass p-2 fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="tab-pane p-2 fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                                 <h4>Profile Information</h4>
                                 <div class="row">
                                     <div class="col-7">
@@ -63,7 +54,7 @@
                                 </div>
                             </div>
                             <!-- General Info Tab -->
-                            <div class="tab-pane card-bg-glass p-2 fade show" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab">
+                            <div class="tab-pane p-2 fade show" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab">
                                 <h4>General Information</h4>
                                 <form>
                                     <div class="mb-3">
@@ -86,7 +77,7 @@
                                 </form>
                             </div>
                             <!-- Password & Email Update Tab -->
-                            <div class="tab-pane card-bg-glass p-2 fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab">
+                            <div class="tab-pane p-2 fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab">
                                 <h4>Update Password & Email</h4>
                                 <form>
                                     <div class="mb-3">
@@ -105,7 +96,7 @@
                                 </form>
                             </div>
                             <!-- Logo Update Tab -->
-                            <div class="tab-pane card-bg-glass p-2 fade" id="v-pills-logo" role="tabpanel" aria-labelledby="v-pills-logo-tab">
+                            <div class="tab-pane p-2 fade" id="v-pills-logo" role="tabpanel" aria-labelledby="v-pills-logo-tab">
                                 <h4>Update Logo</h4>
                                 <form>
                                     <div class="mb-3">
@@ -115,9 +106,8 @@
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#checkPassModal">Update Logo</button>
                                 </form>
                             </div>
-
                             <!-- Receptionist Info Tab -->
-                            <div class="tab-pane card-bg-glass p-2 fade" id="v-pills-receptionist" role="tabpanel" aria-labelledby="v-pills-receptionist-tab">
+                            <div class="tab-pane p-2 fade" id="v-pills-receptionist" role="tabpanel" aria-labelledby="v-pills-receptionist-tab">
                                 <h4>Receptionist Info</h4>
                                 <form>
                                     <div class="mb-3">

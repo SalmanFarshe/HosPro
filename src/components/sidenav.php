@@ -10,7 +10,7 @@
             <i class="fas fa-tachometer-alt"></i>
             Dashboard
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="../pages/room-mapping.php" class="dashboard-nav-item">
             <i class="fa-solid fa-bed"></i>
             Room Mapping
         </a>

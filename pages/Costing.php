@@ -22,8 +22,6 @@
                             <input type="text" class="search-bill" id="search" name="search" value="">
                             <input type="submit" value="Search" class="button">
                         </form>
-
-
                         <div class="table-container">
                             <!-- bills table -->
                             <?php require_once("../src/components/list-cost.php"); ?>

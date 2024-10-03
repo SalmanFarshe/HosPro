@@ -29,7 +29,6 @@
   font-weight: bold;
   font-size: 20px;
   display: flex;
-  /* color: #515151; */
   align-items: center;
 }
 .brand-logo:focus,
@@ -48,7 +47,7 @@
   flex-direction: column;
 }
 .dashboard-nav-item {
-  min-height: 56px;
+  min-height: 45px;
   padding: 8px 20px 8px 70px;
   display: flex;
   align-items: center;
