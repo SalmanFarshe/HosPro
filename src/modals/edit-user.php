@@ -1,8 +1,8 @@
-<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content card-bg-glass">
             <div class="modal-header">
-                <h5 class="modal-title" id="addUserModalLabel">Add New Employee</h5>
+                <h5 class="modal-title" id="editUserModalLabel">Add New Employee</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -21,7 +21,7 @@
                     </div>
                     <button type="submit" class="button w-100">
                         <a href="" class="button_link">
-                            Save User
+                            Changes Update!
                         </a>
                     </button>
                 </form>

@@ -45,13 +45,15 @@
                 </div>
             </div>
             <!-- Add User Modal -->
-            <?php require_once("../src/modals/add-employee.php"); ?>
+            <?php require_once("../src/modals/add-user.php"); ?>
             <!-- Edit User Modal -->
-            <?php require_once("../src/modals/edit-employee.php"); ?>
+            <?php require_once("../src/modals/edit-user.php"); ?>
             <!-- View User Profile Modal -->
-            <?php require_once("../src/modals/view-employee.php"); ?>
+            <?php require_once("../src/modals/view-user.php"); ?>
             <!-- User delete Modal -->
-            <?php require_once("../src/modals/check-password.php"); ?>
+            <?php require_once("../src/modals/delete-user.php"); ?>
+            <!-- User Review Modal -->
+            <?php require_once("../src/modals/user-review.php"); ?>
         </div>
     </div>
     <script src="../assets/js/app.js"></script>
