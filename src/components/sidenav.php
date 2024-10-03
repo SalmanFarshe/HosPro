@@ -38,6 +38,10 @@
             <i class="fa-solid fa-chart-pie"></i>
             Total Costing
         </a>
+        <a href="../pages/Customize.php" class="dashboard-nav-item">
+            <i class="fa-solid fa-pen-to-square"></i>
+            Customization
+        </a>
 
         <div class="nav-item-divider"></div>
 

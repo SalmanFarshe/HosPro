@@ -51,7 +51,7 @@
                         <div class="col">
                             <div class="card-bg-glass my-3">
                                 <!-- Pie chart will be rendered on this canvas -->
-                                <canvas id="myPieChart" class="card-img-top" width="400" height="200"></canvas>
+                                <canvas id="myPieChart" class="card-img-top p-2" width="400" height="250"></canvas>
                             </div>
                         </div>
                     </div>
