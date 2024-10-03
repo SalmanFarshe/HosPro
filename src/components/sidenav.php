@@ -34,7 +34,7 @@
             <i class="fa-regular fa-credit-card"></i>
             Bill & Payments
         </a>
-        <a href="#" class="dashboard-nav-item">
+        <a href="../pages/Costing.php" class="dashboard-nav-item">
             <i class="fa-solid fa-chart-pie"></i>
             Total Costing
         </a>
