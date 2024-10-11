@@ -11,3 +11,11 @@
 .nav-pills > button:hover{
     color: var(--text-color-light);
 }
+.nav-pills .nav-link{
+    color: var(--primary-color);
+}
+.nav-pills .nav-link.active{
+    background-color: var(--primary-color);
+    font-weight: bolder;
+    color: var(--text-color);
+}
