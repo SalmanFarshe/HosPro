@@ -1,3 +1,6 @@
+<?php
+    $activePage = 'dashboard';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

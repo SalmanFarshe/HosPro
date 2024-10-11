@@ -61,7 +61,7 @@
   margin-left: -40px;
 }
 .dashboard-nav-item:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--primary-color);
 }
 .dashboard-nav-dropdown {
   display: flex;
@@ -112,4 +112,10 @@
   margin: 1rem 0;
   overflow: hidden;
   background-color: rgba(236, 238, 239, 0.3);
+}
+.active{
+  border-radius: 5px;
+  font-weight: bolder;
+  background-color: var(--primary-color);
+  color: var(--text-color) !important;
 }

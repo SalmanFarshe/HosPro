@@ -1,3 +1,6 @@
+<?php
+    $activePage = 'billandpayments';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

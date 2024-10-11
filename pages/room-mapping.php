@@ -1,3 +1,6 @@
+<?php
+    $activePage = 'room-mapping';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

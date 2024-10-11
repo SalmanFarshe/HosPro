@@ -1,3 +1,6 @@
+<?php
+    $activePage = 'packages';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

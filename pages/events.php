@@ -1,3 +1,6 @@
+<?php
+    $activePage = 'events';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
