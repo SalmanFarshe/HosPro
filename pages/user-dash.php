@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <div class="dashboard">
+    <div class="dashboard align-items-center justify-content-center">
         <div>
             <div class="container mt-5">
-                <div class="row customiser_wrapper card-bg-glass">
+                <div class="row customiser_wrapper justify-items-center card-bg-glass">
                     <!-- Vertical Tabs Navigation -->
                     <div class="col-md-3 pt-3 customiser_nav_wrapper">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
