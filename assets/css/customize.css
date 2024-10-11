@@ -1,7 +1,6 @@
 .customiser_wrapper{
     height: 500px;
     width: 800px;
-    display: flex;
 }
 .customiser_nav_wrapper{
       background: rgba(112, 185, 207, 0.2);
