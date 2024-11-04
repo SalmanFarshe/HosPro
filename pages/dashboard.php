@@ -1,5 +1,6 @@
 <?php
     $activePage = 'dashboard';
+    // require_once("../root.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

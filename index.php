@@ -1,3 +1,8 @@
+<?php
+    require_once("root.php");
+    require_once(BASE_PATH . 'backend/config/config.php');
+    require_once(BASE_PATH . 'backend/config/create_tables.php');
+?>
 <!-- this file contains the root directory of the system -->
 <!DOCTYPE html>
 <html lang="en">
