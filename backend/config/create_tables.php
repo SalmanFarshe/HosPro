@@ -88,4 +88,13 @@
         FOREIGN KEY (booking_id) REFERENCES bookings(booking_id) ON DELETE CASCADE
     )";
     mysqli_query($connection, $payments_details_table);
+    
+    $admin_details_table = "CREATE TABLE IF NOT EXISTS admin_details (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        hotel_name VARCHAR(100) NOT NULL,
+        hotel_logo VARCHAR(255),
+        admin_password VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )";
+    mysqli_query($connection, $admin_details_table);
 ?>

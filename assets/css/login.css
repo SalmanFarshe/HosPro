@@ -14,7 +14,7 @@
 .logIn-wrap{
     flex-direction: column;
     width: 100%;
-    background-color: var(--box-shadow-color);
+    background-color: rgba(0, 0, 0, 0.685);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -45,4 +45,8 @@
 /* for password reset page */
 .backtologin:hover{
     color: #fffefeb4 !important;
+}
+#selectRole{
+    background-color: var(--primary-color);
+    border: none;
 }
