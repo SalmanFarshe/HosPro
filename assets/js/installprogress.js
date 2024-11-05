@@ -16,5 +16,5 @@ function install_progress() {
     }, 10);
 }
 function runProgram() {
-    window.location.href = 'pages/log-in.php'; 
+    window.location.href = 'pages/admin.php'; 
 }

@@ -28,16 +28,10 @@
             <div class="hospro-content-wrapper bg-glass">
                 <div class="hospro-inner-right">
                     <button type="button" class="button">
-                        <a href="./pages/user-dash.php" class="button_link">user</a>
+                        <a href="./pages/log-in.php" class="button_link">user</a>
                     </button>
                     <button type="button" class="button">
-                        <a href="./pages/dashboard.php" class="button_link">Admin</a>
-                    </button>
-                    <button type="button" class="button">
-                        <a href="./pages/dashboard.php" class="button_link">Reciptionist</a>
-                    </button>
-                    <button type="button" class="button">
-                        <a href="./pages/dashboard.php" class="button_link">Manager</a>
+                        <a href="./pages/admin.php" class="button_link">Admin</a>
                     </button>
                 </div>
             </div>     

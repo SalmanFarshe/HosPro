@@ -2,8 +2,33 @@
     require_once("root.php");
     require_once(BASE_PATH . 'backend/config/config.php');
     require_once(BASE_PATH . 'backend/config/create_tables.php');
+
+    if (isset($_POST["submit_installation_data"])) {
+        
+        $hotel_name = $_POST["hotel_name"];
+        
+        if (isset($_FILES["hotel_logo"]) && $_FILES["hotel_logo"]["error"] == 0) {
+            
+            $hotel_logo = $_FILES["hotel_logo"]["name"];
+            $target_dir = "assets/img/";
+            $target_file = $target_dir . basename($hotel_logo);
+
+            if (move_uploaded_file($_FILES["hotel_logo"]["tmp_name"], $target_file)) {
+        
+                $admin_password = password_hash($_POST["admin_password"], PASSWORD_BCRYPT);
+
+                $insert_installation_details = "INSERT INTO admin_details (hotel_name, hotel_logo, admin_password) VALUES ('$hotel_name', '$hotel_logo', '$admin_password')";
+
+                mysqli_query($connection, $insert_installation_details);
+
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        } else {
+            echo "No file uploaded or an error occurred.";
+        }
+    }
 ?>
-<!-- this file contains the root directory of the system -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +38,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .progress {
-            height: 12px;
-        }
-        #runProgramButton {
-            display: none;
-        }
-    </style>
 </head>
 <body onload="install_progress()">
     <div class="root-page-wrapper">

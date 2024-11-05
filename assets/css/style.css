@@ -86,3 +86,11 @@
         width: 100px;
     }
 }
+
+/* installation */
+.progress {
+    height: 12px;
+}
+#runProgramButton {
+    display: none;
+}
