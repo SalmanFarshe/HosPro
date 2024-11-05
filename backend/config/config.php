@@ -16,9 +16,9 @@ if (!$db_selected) {
     if (!mysqli_query($connection, $create_db)) {
         die("Error creating database: " . mysqli_error($connection));
     }
-    $connection = mysqli_connect($server_name, $dbusername, $dbpassword, $dbname);
-    if (!$connection) {
-        die('Error reconnecting to the new database: ' . mysqli_connect_error());
-    }
+}
+$connection = mysqli_connect($server_name, $dbusername, $dbpassword, $dbname);
+if (!$connection) {
+    die('Error reconnecting to the new database: ' . mysqli_connect_error());
 }
 ?>
