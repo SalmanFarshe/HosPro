@@ -1,3 +1,24 @@
+<?php
+    require_once("root.php");
+    require_once(BASE_PATH . 'backend/config/config.php');
+
+    $table_name = "admin_details";
+    $check_table_query = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '$dbname' AND TABLE_NAME = '$table_name'";
+    $has_table = mysqli_query($connection, $check_table_query);
+    if (mysqli_num_rows($has_table) > 0) {
+        //redirecting if the installation already completed
+        echo '<meta http-equiv="refresh" content="0; url=http://localhost/01.HosPro/pages/admin.php">';
+    } else {
+        $admin_details_table = "CREATE TABLE IF NOT EXISTS admin_details (
+            id INT PRIMARY KEY AUTO_INCREMENT,
+            hotel_name VARCHAR(100) NOT NULL,
+            hotel_logo VARCHAR(255),
+            admin_password VARCHAR(255) NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )";
+        mysqli_query($connection, $admin_details_table);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +43,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="hotel_logo" class="form-label frm-label fw-bold">Hotel Logo</label>
-                                <input type="file" class="form-control frm-input" id="hotel_logo" name="hotel_logo" accept="image/*">
+                                <input type="file" class="form-control frm-input" id="hotel_logo" name="hotel_logo" accept="image/*" required>
                                 <small class="form-text text-white">Upload a logo (JPEG, PNG)</small>
                             </div>
                             <div class="mb-3">
@@ -31,7 +52,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Submit Button across both columns -->
                     <div class="text-center mt-4">
                         <button type="submit" name="submit_installation_data" class="btn btn-primary fw-bold">Complete Setup</button>
                     </div>
