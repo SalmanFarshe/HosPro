@@ -1,26 +1,25 @@
 <?php
     require_once("root.php");
     require_once(BASE_PATH . 'backend/config/config.php');
-    require_once(BASE_PATH . 'backend/config/create_tables.php');
-
-    if (isset($_POST["submit_installation_data"])) {
-        
+    $table_name = "user_details";
+    $check_table_query = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '$dbname' AND TABLE_NAME = '$table_name'";
+    $has_table = mysqli_query($connection, $check_table_query);
+    if (mysqli_num_rows($has_table) > 0) {
+        //redirecting if the installation already completed
+        echo '<meta http-equiv="refresh" content="0; url=http://localhost/01.HosPro/pages/admin.php">';
+    } else {
+        require_once(BASE_PATH . 'backend/config/create_tables.php');
+    }
+    if (isset($_POST["submit_installation_data"])) {    
         $hotel_name = $_POST["hotel_name"];
-        
         if (isset($_FILES["hotel_logo"]) && $_FILES["hotel_logo"]["error"] == 0) {
-            
             $hotel_logo = $_FILES["hotel_logo"]["name"];
             $target_dir = "assets/img/";
             $target_file = $target_dir . basename($hotel_logo);
-
             if (move_uploaded_file($_FILES["hotel_logo"]["tmp_name"], $target_file)) {
-        
                 $admin_password = password_hash($_POST["admin_password"], PASSWORD_BCRYPT);
-
                 $insert_installation_details = "INSERT INTO admin_details (hotel_name, hotel_logo, admin_password) VALUES ('$hotel_name', '$hotel_logo', '$admin_password')";
-
                 mysqli_query($connection, $insert_installation_details);
-
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
