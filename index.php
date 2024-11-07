@@ -2,7 +2,6 @@
     require_once("root.php");
     require_once(BASE_PATH . 'backend/config/config.php');
 ?>
-<!-- this file contains the root directory of the system -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
