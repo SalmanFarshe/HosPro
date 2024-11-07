@@ -14,7 +14,7 @@
         $hotel_name = $_POST["hotel_name"];
         if (isset($_FILES["hotel_logo"]) && $_FILES["hotel_logo"]["error"] == 0) {
             $hotel_logo = $_FILES["hotel_logo"]["name"];
-            $target_dir = "assets/img/";
+            $target_dir = "assets/img/uploads/";
             $target_file = $target_dir . basename($hotel_logo);
             if (move_uploaded_file($_FILES["hotel_logo"]["tmp_name"], $target_file)) {
                 $admin_password = password_hash($_POST["admin_password"], PASSWORD_BCRYPT);
