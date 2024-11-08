@@ -17,7 +17,7 @@
             $target_dir = "assets/img/uploads/";
             $target_file = $target_dir . basename($hotel_logo);
             if (move_uploaded_file($_FILES["hotel_logo"]["tmp_name"], $target_file)) {
-                $admin_password = password_hash($_POST["admin_password"], PASSWORD_BCRYPT);
+                $admin_password = $_POST["admin_password"];
                 $insert_installation_details = "INSERT INTO admin_details (hotel_name, hotel_logo, admin_password) VALUES ('$hotel_name', '$hotel_logo', '$admin_password')";
                 mysqli_query($connection, $insert_installation_details);
             } else {
