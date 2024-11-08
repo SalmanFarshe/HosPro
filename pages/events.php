@@ -1,5 +1,6 @@
 <?php
     $activePage = 'events';
+    require_once("../backend/controller/admin-mood.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

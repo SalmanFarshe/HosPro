@@ -43,7 +43,7 @@
     <div class="nav-item-divider"></div>
 
     <nav class="dashboard-nav-list">
-        <a href="../index.php" class="dashboard-nav-item">
+        <a href="../pages/logout.php" class="dashboard-nav-item">
             <i class="fas fa-sign-out-alt"></i> Logout
         </a>
     </nav>

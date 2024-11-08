@@ -1,6 +1,6 @@
 <?php
     $activePage = 'dashboard';
-    // require_once("../root.php");
+    require_once("../backend/controller/admin-mood.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
