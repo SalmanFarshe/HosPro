@@ -1,19 +1,22 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "thehosprodb2");
 if (isset($_POST['submit'])) {
-  $name = $_POST['name'];
-  $position = $_POST['position'];
-  $email = $_POST['email'];
-  $salary = $_POST['salary'];
-  $sql = " INSERT INTO `employee_details`(`employee_full_name`, `employee_role`, `employee_email`, `employee_nid` ) VALUES ( '$name', '$position', '$email', '$salary' )";
+    $employee_full_name = $_POST['employee_full_name'];
+    $employee_role = $_POST['employee_role'];
+    $employee_email = $_POST['employee_email'];
+    $employee_address = $_POST['employee_address'];
+    $employee_phn = $_POST['employee_phn'];
+    $employee_nid = $_POST['employee_nid'];
+    $employee_dob = $_POST['employee_dob'];
+    $employee_salary = $_POST['employee_salary'];
+    $add_employee_query = " INSERT INTO `employee_details`(`employee_full_name`, `employee_role`, `employee_email`, `employee_address`, `employee_phn`, `employee_nid`, `employee_dob`, `employee_salary` ) VALUES ( '$employee_full_name', '$employee_role', '$employee_email', '$employee_address', '$employee_phn', '$employee_nid', '$employee_dob', '$employee_salary' )";
 
-  $result = mysqli_query($conn, $sql);
-  if($result){
-    echo "Data Inserted Successfully";
-  }
-  else{
-    die("Connection failed".$conn->connect_error);
-  }
+    $result = mysqli_query($conn, $add_employee_query);
+    if ($result) {
+        echo "Data Inserted Successfully";
+    } else {
+        die("Connection failed" . $conn->connect_error);
+    }
 }
 ?>
 
@@ -26,28 +29,60 @@ if (isset($_POST['submit'])) {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="" method="POST">
-                    <div class="mb-3">
-                        <label for="employeeNameInput" class="frm-label form-label">Employee Name</label>
-                        <input type="text" name="name" class="frm-input form-control" id="employeeNameInput" required>
+            <div class="modal-body">
+                <form id="addEmployeeForm" action="" method="post">
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="employeeNameInput" class="frm-label form-label">Employee Name</label>
+                                <input type="text" name="employee_full_name" class="frm-input form-control" id="employeeNameInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="employeePositionInput" class="frm-label form-label">Position</label>
+                                <input type="text" name="employee_role" class="frm-input form-control" id="employeePositionInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="employeeEmailInput" class="frm-label form-label">Email</label>
+                                <input type="email" name="employee_email" class="frm-input form-control" id="employeeEmailInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="employeeAddressInput" class="frm-label form-label">Address</label>
+                                <input type="text" name="employee_address" class="frm-input form-control" id="employeeAddressInput" required>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="employeePhoneInput" class="frm-label form-label">Phone</label>
+                                <input type="number" name="employee_phn" class="frm-input form-control" id="employeePhoneInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="employeeNIDInput" class="frm-label form-label">NID</label>
+                                <input type="number" name="employee_nid" class="frm-input form-control" id="employeeNIDInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="employeeDOBInput" class="frm-label form-label">DOB</label>
+                                <input type="date" name="employee_dob" class="frm-input form-control" id="employeeDOBInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="employeeSalaryInput" class="frm-label form-label">Salary</label>
+                                <input type="number" name="employee_salary" class="frm-input form-control" id="employeeSalaryInput" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="employeePositionInput" class="frm-label form-label">Position</label>
-                        <input type="text" name="position" class="frm-input form-control" id="employeePositionInput" required>
+
+                    <!-- Submit Button -->
+                    <div class="modal-footer">
+                        <button type="submit" class="button w-100" name="submit">
+                            <a href="#" class="button_link">
+                                Add Employee
+                            </a>
+                        </button>
                     </div>
-                    <div class="mb-3">
-                        <label for="employeeEmailInput" class="frm-label form-label">Email</label>
-                        <input type="text" name="email" class="frm-input form-control" id="employeeEmailInput" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="employeeSalaryInput" class="frm-label form-label">Salary</label>
-                        <input type="text" name="salary" class="frm-input form-control" id="employeeSalaryInput" required>
-                    </div>
-                    <!-- Submit button -->
-                    <button type="submit" name="submit" class="button w-100">
-                        Save User
-                    </button>
                 </form>
+            </div>
 
             <!-- <div class="modal-body">
                 <form method="POST">

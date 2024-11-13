@@ -29,6 +29,7 @@
                             <option value="conference">Conference</option>
                             <option value="workshop">Workshop</option>
                             <option value="seminar">Seminar</option>
+                            <option value="program">Program</option>
                         </select>
                     </div>
                     <div class="col-md-3">
