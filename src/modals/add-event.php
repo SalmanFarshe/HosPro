@@ -1,21 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "all");
-if (isset($_POST['submit'])) {
-  $event_name = $_POST['event_name'];
-  $date = $_POST['date'];
-  $category = $_POST['category'];
-  $description = $_POST['description'];
-  $status = $_POST['status'];
-  $sql = " INSERT INTO `events_details`(`event_name`, `date`, `category`, `description`, `status`) VALUES ( '$event_name', '$date', '$category', '$description', '$status' )";
-
-  $result = mysqli_query($conn, $sql);
-  if($result){
-    echo "Data Inserted Successfully";
-  }
-  else{
-    die("Connection failed".$conn->connect_error);
-  }
-}
+require_once('../backend/config/config.php');
 ?>
 
 <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel" aria-hidden="true">
@@ -23,7 +7,7 @@ if (isset($_POST['submit'])) {
         <div class="modal-content card-bg-glass">
             <div class="modal-body">
                 
-                <form id="addEventForm" action="" method="post">
+                <form id="addEventForm" action="events.php" method="post">
                     <div class="mb-3">
                         <label for="eventName" class="form-label frm-label">Event Name</label>
                         <input type="text" name="event_name" class="form-control frm-input" id="eventName" required>
@@ -52,7 +36,7 @@ if (isset($_POST['submit'])) {
                             <option value="completed">Completed</option>
                         </select>
                     </div>
-                    <button type="submit" class="button w-100">
+                    <button type="submit" class="button w-100" name="submit">
                         <a href="#" class="button_link">
                             Add Event
                         </a>
@@ -62,3 +46,21 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 </div>
+<?php 
+if (isset($_POST['submit'])) {
+    $event_name = $_POST['event_name'];
+    $date = $_POST['date'];
+    $category = $_POST['category'];
+    $description = $_POST['description'];
+    $status = $_POST['status'];
+    $sql = "INSERT INTO `events_details` (`events_name`, `event_date`, `event_amount`) VALUES ( '$event_name', '$date', '$category')";
+  
+    $result = mysqli_query($connection, $sql);
+    if($result){
+        
+    }
+    else{
+      die("Connection failed");
+    }
+  }
+?>

@@ -1,10 +1,10 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "all");
+$conn = new mysqli("localhost", "root", "", "thehosprodb2");
 if (isset($_POST['submit'])) {
   $name = $_POST['name'];
   $phone = $_POST['phone'];
   $address = $_POST['address'];
-  $sql = " INSERT INTO `user`(`name`, `phone`, `address`) VALUES ( '$name', '$phone', '$address' )";
+  $sql = " INSERT INTO `user_details`(`user_name`, `user_phn`, `user_address`) VALUES ( '$name', '$phone', '$address' )";
 
   $result = mysqli_query($conn, $sql);
   if($result){

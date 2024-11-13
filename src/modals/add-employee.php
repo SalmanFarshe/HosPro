@@ -1,11 +1,11 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "all");
+$conn = new mysqli("localhost", "root", "", "thehosprodb2");
 if (isset($_POST['submit'])) {
   $name = $_POST['name'];
   $position = $_POST['position'];
   $email = $_POST['email'];
   $salary = $_POST['salary'];
-  $sql = " INSERT INTO `employee_details`(`name`, `position`, `email`, `salary` ) VALUES ( '$name', '$position', '$email', '$salary' )";
+  $sql = " INSERT INTO `employee_details`(`employee_full_name`, `employee_role`, `employee_email`, `employee_nid` ) VALUES ( '$name', '$position', '$email', '$salary' )";
 
   $result = mysqli_query($conn, $sql);
   if($result){
