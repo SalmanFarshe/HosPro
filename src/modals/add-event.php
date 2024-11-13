@@ -1,19 +1,40 @@
+<?php
+$conn = new mysqli("localhost", "root", "", "all");
+if (isset($_POST['submit'])) {
+  $event_name = $_POST['event_name'];
+  $date = $_POST['date'];
+  $category = $_POST['category'];
+  $description = $_POST['description'];
+  $status = $_POST['status'];
+  $sql = " INSERT INTO `events_details`(`event_name`, `date`, `category`, `description`, `status`) VALUES ( '$event_name', '$date', '$category', '$description', '$status' )";
+
+  $result = mysqli_query($conn, $sql);
+  if($result){
+    echo "Data Inserted Successfully";
+  }
+  else{
+    die("Connection failed".$conn->connect_error);
+  }
+}
+?>
+
 <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content card-bg-glass">
             <div class="modal-body">
-                <form id="addEventForm">
+                
+                <form id="addEventForm" action="" method="post">
                     <div class="mb-3">
                         <label for="eventName" class="form-label frm-label">Event Name</label>
-                        <input type="text" class="form-control frm-input" id="eventName" required>
+                        <input type="text" name="event_name" class="form-control frm-input" id="eventName" required>
                     </div>
                     <div class="mb-3">
                         <label for="eventDate" class="form-label frm-label">Event Date</label>
-                        <input type="date" class="form-control frm-input" id="eventDate" required>
+                        <input type="date" name="date" class="form-control frm-input" id="eventDate" required>
                     </div>
                     <div class="mb-3">
                         <label for="eventCategory" class="form-label frm-label">Category</label>
-                        <select class="form-select select-cat" id="eventCategory" required>
+                        <select name="category" class="form-select select-cat" id="eventCategory" required>
                             <option value="conference">Conference</option>
                             <option value="workshop">Workshop</option>
                             <option value="seminar">Seminar</option>
@@ -21,11 +42,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="eventDescription" class="form-label frm-label">Description</label>
-                        <textarea class="form-control frm-input" id="eventDescription" rows="3"></textarea>
+                        <textarea class="form-control frm-input" name="description" id="eventDescription" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="eventStatus" class="form-label frm-label">Status</label>
-                        <select class="form-select select-sts" id="eventStatus">
+                        <select class="form-select select-sts" name="status" id="eventStatus">
                             <option value="upcoming">Upcoming</option>
                             <option value="ongoing">Ongoing</option>
                             <option value="completed">Completed</option>

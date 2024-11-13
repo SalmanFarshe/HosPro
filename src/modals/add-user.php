@@ -1,28 +1,47 @@
+<?php
+$conn = new mysqli("localhost", "root", "", "all");
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $phone = $_POST['phone'];
+  $address = $_POST['address'];
+  $sql = " INSERT INTO `user`(`name`, `phone`, `address`) VALUES ( '$name', '$phone', '$address' )";
+
+  $result = mysqli_query($conn, $sql);
+  if($result){
+    echo "Data Inserted Successfully";
+  }
+  else{
+    die("Connection failed".$conn->connect_error);
+  }
+}
+?>
+
+
 <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content card-bg-glass">
             <div class="modal-header">
-                <h5 class="modal-title" id="addUserModalLabel">Add New Employee</h5>
+                <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <!-- Form with action and method -->
+                <form action="" method="POST">
                     <div class="mb-3">
-                        <label for="userName" class="frm-label form-label">User Name</label>
-                        <input type="text" class="frm-input form-control" id="userName" required>
+                        <label for="userNameInput" class="frm-label form-label">User Name</label>
+                        <input type="text" name="name" class="frm-input form-control" id="userNameInput" required>
                     </div>
                     <div class="mb-3">
-                        <label for="userPhone" class="frm-label form-label">Phone</label>
-                        <input type="text" class="frm-input form-control" id="userPhone" required>
+                        <label for="userPhoneInput" class="frm-label form-label">Phone</label>
+                        <input type="text" name="phone" class="frm-input form-control" id="userPhoneInput" required>
                     </div>
                     <div class="mb-3">
-                        <label for="userAddress" class="frm-label form-label">Address</label>
-                        <input type="text" class="frm-input form-control" id="userAddress" required>
+                        <label for="userAddressInput" class="frm-label form-label">Address</label>
+                        <input type="text" name="address" class="frm-input form-control" id="userAddressInput" required>
                     </div>
-                    <button type="submit" class="button w-100">
-                        <a href="" class="button_link">
-                            Save User
-                        </a>
+                    <!-- Submit button -->
+                    <button type="submit" name="submit" class="button w-100">
+                        Save User
                     </button>
                 </form>
             </div>

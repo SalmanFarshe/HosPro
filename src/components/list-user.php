@@ -1,6 +1,7 @@
 <table class="table card-bg-glass">
     <thead>
         <tr>
+            <th>UID</th>
             <th>Name</th>
             <th>Phone</th>
             <th>Address</th>
@@ -9,54 +10,31 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Employee Rows (To be dynamically populated) -->
-        <tr>
-            <td>Mr. Salman</td>
-            <td>+880 1234567989</td>
-            <td>Ashulia,Savar,Dhaka</td>
-            <td>Present</td>
-            <td class="d-flex justify-content-between">
-                <button class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                    data-bs-target="#editUserModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#checkPassModal">Delete</button>
-                <button class="btn btn-sm btn-info" data-bs-toggle="modal"
-                    data-bs-target="#profileUserModal">Profile</button>
-                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
-                    data-bs-target="#reviewUserModal">Review</button>
-            </td>
-        </tr>
-        <tr>
-            <td>Mr. Salman</td>
-            <td>+880 1234567989</td>
-            <td>Ashulia,Savar,Dhaka</td>
-            <td>Present</td>
-            <td class="d-flex justify-content-between">
-                <button class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                    data-bs-target="#editUserModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#checkPassModal">Delete</button>
-                <button class="btn btn-sm btn-info" data-bs-toggle="modal"
-                    data-bs-target="#profileUserModal">Profile</button>
-                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
-                    data-bs-target="#reviewUserModal">Review</button>
-            </td>
-        </tr>
-        <tr>
-            <td>Mr. Salman</td>
-            <td>+880 1234567989</td>
-            <td>Ashulia,Savar,Dhaka</td>
-            <td>Present</td>
-            <td class="d-flex justify-content-between">
-                <button class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                    data-bs-target="#editUserModal">Edit</button>
-                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#checkPassModal">Delete</button>
-                <button class="btn btn-sm btn-info" data-bs-toggle="modal"
-                    data-bs-target="#profileUserModal">Profile</button>
-                <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
-                    data-bs-target="#reviewUserModal">Review</button>
-            </td>
-        </tr>
+        <?php
+        $conn = new mysqli("localhost", "root", "", "all");
+        $sql = "SELECT * FROM user";
+        $result = $conn->query($sql);
+        if (!$result) {
+            die("Invalid query!");
+        }
+        while ($row = $result->fetch_assoc()) {
+        ?>
+            <tr>
+                <th><?php echo $row['uid'] ?></th>
+                <td><?php echo $row['name'] ?></td>
+                <td><?php echo $row['phone'] ?></td>
+                <td><?php echo $row['address'] ?></td>
+                <td class='d-flex justify-content-between'>
+                    <a href='edit.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-warning' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Edit</a>
+                    <a href='delete.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Delete</a>
+                    <a href='#' type='button' class='btn btn-sm btn-info' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Profile</a>
+                    <a href='#' type='button' class='btn btn-sm btn-secondary' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Review</a>
+                </td>
+            </tr>
+        <?php
+        }
+        ?>
+
+
     </tbody>
 </table>
