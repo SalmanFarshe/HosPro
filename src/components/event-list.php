@@ -1,38 +1,37 @@
+<?php 
+    include('../backend/config/config.php');
+?>
 <div class="table-responsive mt-4">
     <table class="table card-bg-glass">
         <thead>
             <tr>
-                <th>EvId</th>
-                <th>User Name</th>
+                <th>Event ID</th>
                 <th>Event Name</th>
-                <th>Date</th>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Event Date</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $conn = new mysqli("localhost", "root", "", "all");
-            $sql = "SELECT * FROM event_details";
-            $result = $conn->query($sql);
+            $sql = "SELECT * FROM events_details";
+            $result = mysqli_query($connection,$sql);
             if (!$result) {
                 die("Invalid query!");
             }
-            while ($row = $result->fetch_assoc()) {
+            while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <tr>
-                    <th><?php echo $row['EvId'] ?></th>
-                    <th><?php echo $row['user_name'] ?></th>
-                    <td><?php echo $row['event_name'] ?></td>
-                    <th><?php echo $row['date'] ?></th>
-                    <td><?php echo $row['category'] ?></td>
-                    <td><?php echo $row['status'] ?></td>
+                    <th><?php echo $row['events_id'] ?></th>
+                    <th><?php echo $row['events_name'] ?></th>
+                    <td><?php echo $row['event_date'] ?></td>
                     <td class='d-flex justify-content-between'>
-                        <a href='edit.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-warning' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Edit</a>
-                        <a href='delete.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Delete</a>
+                        <!-- <a href='#' type='button' class='btn btn-sm btn-warning' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Edit</a>
+                        <a href='#' type='button' class='btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Delete</a>
                         <a href='#' type='button' class='btn btn-sm btn-info' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Profile</a>
-                        <a href='#' type='button' class='btn btn-sm btn-secondary' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Review</a>
+                        <a href='#' type='button' class='btn btn-sm btn-secondary' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Review</a> -->
+                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEventModal">Edit</button>
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
+                    <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#eventDetailsModal">Details</button>
                     </td>
                 </tr>
             <?php
@@ -51,9 +50,7 @@
                 <td>Conference</td>
                 <td><span class="badge bg-info">Upcoming</span></td>
                 <td>
-                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editEventModal">Edit</button>
-                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</button>
-                    <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#eventDetailsModal">Details</button>
+                    
                 </td>
             </tr>
         </tbody> -->

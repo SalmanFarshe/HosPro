@@ -11,8 +11,8 @@
     </thead>
     <tbody>
         <?php
-        $conn = new mysqli("localhost", "root", "", "all");
-        $sql = "SELECT * FROM user";
+        $conn = new mysqli("localhost", "root", "", "thehosprodb2");
+        $sql = "SELECT * FROM user_details";
         $result = $conn->query($sql);
         if (!$result) {
             die("Invalid query!");
@@ -20,10 +20,10 @@
         while ($row = $result->fetch_assoc()) {
         ?>
             <tr>
-                <th><?php echo $row['uid'] ?></th>
-                <td><?php echo $row['name'] ?></td>
-                <td><?php echo $row['phone'] ?></td>
-                <td><?php echo $row['address'] ?></td>
+                <th><?php echo $row['user_id'] ?></th>
+                <td><?php echo $row['user_name'] ?></td>
+                <td><?php echo $row['user_phn'] ?></td>
+                <td><?php echo $row['user_address'] ?></td>
                 <td class='d-flex justify-content-between'>
                     <a href='edit.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-warning' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Edit</a>
                     <a href='delete.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Delete</a>
