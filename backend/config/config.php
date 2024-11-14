@@ -2,7 +2,7 @@
 $server_name = 'localhost';
 $dbusername = 'root';
 $dbpassword = '';
-$dbname = 'thehosprodb2';
+$dbname = 'thehosprodb';
 
 $connection = mysqli_connect($server_name, $dbusername, $dbpassword);
 if (!$connection) {
