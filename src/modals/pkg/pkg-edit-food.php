@@ -8,18 +8,22 @@
             </div>
             <div class="modal-body">
                 <form>
-                <div class="mb-3">
-                    <label for="foodPackageName" class="form-label text-primary">Package Name</label>
-                    <input type="text" class="form-control frm-input" id="foodPackageName" value="Breakfast Package">
-                </div>
-                <div class="mb-3">
-                    <label for="foodPackageDescription" class="form-label text-primary">Description</label>
-                    <textarea class="form-control frm-input" id="foodPackageDescription">Includes continental breakfast with a variety of options.</textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="foodPackagePrice" class="form-label text-primary">Price</label>
-                    <input type="text" class="form-control frm-input" id="foodPackagePrice" value="$50">
-                </div>
+                    <div class="mb-3">
+                        <label for="foodPackageName" class="form-label text-primary">Package Name</label>
+                        <input type="text" class="form-control frm-input" id="foodPackageName" value="Breakfast Package">
+                    </div>
+                    <div class="mb-3">
+                        <label for="foodPackagePrice" class="form-label text-primary">Price</label>
+                        <input type="text" class="form-control frm-input" id="foodPackagePrice" value="$50">
+                    </div>
+                    <div class="mb-3">
+                        <label for="foodAvailability" class="frm-label">Availability</label>
+                        <input type="number" class="frm-input" id="foodAvailability" value="20" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="foodPackageDescription" class="form-label text-primary">Description</label>
+                        <textarea class="form-control frm-input" id="foodPackageDescription">Includes continental breakfast with a variety of options.</textarea>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">

@@ -39,14 +39,24 @@
     mysqli_query($connection, $room_details_table);
 
     // package_details table
-    $package_details_table = "CREATE TABLE IF NOT EXISTS package_details (
-        package_id INT PRIMARY KEY AUTO_INCREMENT,
-        package_name VARCHAR(50) NOT NULL UNIQUE,
-        package_type VARCHAR(50) NOT NULL,
-        package_price DECIMAL(10, 2) NOT NULL,
-        package_availability BOOLEAN DEFAULT TRUE
+    $room_package_table = "CREATE TABLE IF NOT EXISTS room_package_details (
+        room_package_id INT PRIMARY KEY AUTO_INCREMENT,
+        room_package_name VARCHAR(50) NOT NULL UNIQUE,
+        room_package_details VARCHAR(50) NOT NULL UNIQUE,
+        room_package_type VARCHAR(50) NOT NULL,
+        room_package_price DECIMAL(10, 2) NOT NULL,
+        room_package_availability BOOLEAN DEFAULT TRUE
     )";
-    mysqli_query($connection, $package_details_table);
+    mysqli_query($connection, $room_package_table);
+    $food_package_table = "CREATE TABLE IF NOT EXISTS food_package_details (
+        food_package_id INT PRIMARY KEY AUTO_INCREMENT,
+        food_package_name VARCHAR(50) NOT NULL UNIQUE,
+        room_package_details VARCHAR(50) NOT NULL UNIQUE,
+        food_package_type VARCHAR(50) NOT NULL,
+        food_package_price DECIMAL(10, 2) NOT NULL,
+        food_package_availability BOOLEAN DEFAULT TRUE
+    )";
+    mysqli_query($connection, $food_package_table);
 
     // events_details table
     $events_details_table = "CREATE TABLE IF NOT EXISTS events_details (
