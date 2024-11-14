@@ -15,7 +15,7 @@
     mysqli_query($connection, $user_details_table);
 
     // employee_details table
-    $employee_details_table = "CREATE TABLE IF NOT EXISTS employee_details (
+    $employee_details_table = "CREATE TABLE IF NOT EXISTS employees (
         employee_id INT PRIMARY KEY AUTO_INCREMENT,
         employee_full_name VARCHAR(100) NOT NULL,
         employee_email VARCHAR(100) UNIQUE,
