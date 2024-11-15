@@ -4,7 +4,8 @@ $dbusername = 'root';
 $dbpassword = '';
 $dbname = 'thehosprodb';
 
-$connection = mysqli_connect($server_name, $dbusername, $dbpassword);
+global $connection;
+$connection= mysqli_connect($server_name, $dbusername, $dbpassword);
 if (!$connection) {
     die('Connection failed: ' . mysqli_connect_error());
 }

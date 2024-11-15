@@ -1,4 +1,3 @@
-
 <!-- Modal for Adding Room Package -->
 <div class="modal fade" id="addRoomPackageModal" tabindex="-1" aria-labelledby="addRoomPackageModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -8,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="POST">
+                <form method="POST" action="packages.php">
                     <div class="mb-3">
                         <label for="roomName" class="frm-label">Room Package Name</label>
                         <input type="text" name="room_name" class="frm-input" id="roomName" required>
@@ -32,25 +31,19 @@
     </div>
 </div>
 <?php
-    $server_name = 'localhost';
-    $dbusername = 'root';
-    $dbpassword = '';
-    $dbname = 'thehosprodb2';
-    
     if (isset($_POST['submit_room_data'])) {
-        $connection = mysqli_connect($server_name, $dbusername, $dbpassword);
         $room_name = $_POST['room_name'];
         $room_price = $_POST['room_price'];
         $room_availability = $_POST['room_availability'];
         $room_description = $_POST['room_description'];
-        $add_room_query = "INSERT INTO `user_details`(`room_package_name`, `room_package_details`, `romm_package_price`, `room_package_availability`) VALUES ( '$room_name', '$room_price', '$room_availability', '$room_description' )";
+        $add_room_query = "INSERT INTO `room_package_details`(`room_package_name`, `room_package_details`, `room_package_price`, `room_package_availability`) VALUES ( '$room_name', '$room_description', '$room_price', '$room_availability')";
         $result = mysqli_query($connection, $add_room_query);
-        echo $result;
-        if($result){
-            echo "Data Inserted Successfully";
+        if(!$result){
+         die("Query failed: " . mysqli_error($connection));
         }
-        else{
-            die("Connection failed ldskvgdskmgdsklm");
+        if(!$connection)
+        {
+            echo "connec error";
         }
     }
 ?>

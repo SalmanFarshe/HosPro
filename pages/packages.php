@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-2">
                         <!-- Button to Open the Main Package Modal -->
-                        <button type="button" class="btn button" data-bs-toggle="modal" data-bs-target="#addPackageModal">
+                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#addPackageModal">
                             Add Package
                         </button>
                     </div>

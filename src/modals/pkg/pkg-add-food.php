@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="addRoomForm" method="POST">
+                <form id="addRoomForm" method="POST" action="packages.php">
                     <div class="mb-3">
                         <label for="foodName" class="frm-label">Food Package Name</label>
                         <input type="text" class="frm-input" name="foodName" id="foodName" required>
@@ -31,23 +31,15 @@
     </div>
 </div>
 <?php
-    $server_name = 'localhost';
-    $dbusername = 'root';
-    $dbpassword = '';
-    $dbname = 'thehosprodb2';
     if (isset($_POST['foodDataSubmit'])) {
-        $connection = mysqli_connect($server_name, $dbusername, $dbpassword);
         $food_name = $_POST['foodName'];
         $food_price = $_POST['foodPrice'];
         $food_availability = $_POST['foodAvailability'];
         $food_description = $_POST['foodDescription'];
-        $add_food_query = "INSERT INTO `user_details`(`food_package_name`, `food_package_details`, `food_package_price`, `food_package_availability`) VALUES ( '$food_name', '$food_price', '$food_availability', '$food_description' )";
+        $add_food_query = "INSERT INTO `food_package_details`(`food_package_name`, `food_package_details`, `food_package_price`, `food_package_availability`) VALUES ( '$food_name', '$food_price', '$food_availability', '$food_description' )";
         $result = mysqli_query($connection, $add_food_query);
-        if($result){
-            echo "Data Inserted Successfully";
-        }
-        else{
-            die("Connection failed lkcbjldfng;ldfkjgn;ldfkn");
+        if(!$result){
+         die("Query failed: " . mysqli_error($connection));
         }
     }
 ?>
