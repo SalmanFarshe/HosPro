@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "thehosprodb2");
+$conn = new mysqli("localhost", "root", "", "thehosprodb");
 if (isset($_POST['submit'])) {
   $user_name = $_POST['user_name'];
   $user_phn = $_POST['user_phn'];
@@ -15,8 +15,6 @@ if (isset($_POST['submit'])) {
   }
 }
 ?>
-
-
 <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content card-bg-glass">

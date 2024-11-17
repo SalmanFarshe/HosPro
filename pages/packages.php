@@ -1,6 +1,7 @@
 <?php
     $activePage = 'packages';
     require_once("../backend/controller/admin-mood.php");
+    require_once("../backend/config/config.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,11 +19,11 @@
             <div class="container">
                 <div class="row w-100 justify-content-center align-items-center">
                     <div class="col-md-10">
-                        <p class="display-3">Welcome to Package Manager</p>
+                        <p class="display-6">Welcome to Package Manager</p>
                     </div>
                     <div class="col-md-2">
                         <!-- Button to Open the Main Package Modal -->
-                        <button type="button" class="btn button" data-bs-toggle="modal" data-bs-target="#addPackageModal">
+                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#addPackageModal">
                             Add Package
                         </button>
                     </div>
@@ -34,8 +35,14 @@
             <?php require_once('../src/modals/pkg/pkg-add-food.php'); ?>
             <!-- list of packages -->
             <div class="container my-4">
-                <?php require_once('../src/components/pkg-list-room.php'); ?>
-                <?php require_once('../src/components/pkg-list-food.php'); ?>
+                <div class="row">
+                    <div class="col-md-6">
+                        <?php require_once('../src/components/pkg-list-room.php'); ?>
+                    </div>
+                    <div class="col-md-6">
+                        <?php require_once('../src/components/pkg-list-food.php'); ?>
+                    </div>
+                </div>
             </div>
             <?php require_once('../src/modals/pkg/pkg-view-room.php'); ?>
             <?php require_once("../src/modals/pkg/pkg-edit-room.php"); ?>

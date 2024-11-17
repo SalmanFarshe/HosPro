@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <?php
-        $conn = new mysqli("localhost", "root", "", "thehosprodb2");
+        $conn = new mysqli("localhost", "root", "", "thehosprodb");
         $sql = "SELECT * FROM user_details";
         $result = $conn->query($sql);
         if (!$result) {
