@@ -1,12 +1,12 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "thehosprodb");
+$conn = new mysqli("localhost", "root", "", "hosprodb");
 if (isset($_POST['submit'])) {
   $name = $_POST['name'];
   $phone = $_POST['phone'];
   $address = $_POST['address'];
   $sql = " INSERT INTO `user_details`(`user_name`, `user_phn`, `user_address`) VALUES ( '$name', '$phone', '$address' )";
 
-    $result = mysqli_query($conn, $add_user_query);
+    $result = mysqli_query($conn, $sql);
     if ($result) {
         echo "Data Inserted Successfully";
     } else {
