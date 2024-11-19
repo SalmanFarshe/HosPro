@@ -13,15 +13,30 @@
         <div class="login-inner-wrap bg-glass p-4 w-25">
           <h2 class="text-center">Log In</h2>
           <div class="">
-            <form class="row g-3">
+            <form class="row g-3" action="log-in.php" method="post">
+              <!-- Email/Username -->
               <div class="col-12">
-                <label for="inputEmail4" class="form-label frm-label">Username</label>
-                <input type="text" name="user_name" class="form-control frm-input" id="inputEmail4" required>
+                <label for="emailOrUsername" class="form-label frm-label">Email / Username</label>
+                <input 
+                  type="text" 
+                  class="form-control frm-input" 
+                  id="emailOrUsername" 
+                  name="emailOrUsername" 
+                  required>
               </div>
+              
+              <!-- Password -->
               <div class="col-12">
-                <label for="inputPassword4" class="form-label frm-label">Password</label>
-                <input type="password" name="user_password" class="form-control frm-input" id="inputPassword4" required>
-              </div>                
+                <label for="password" class="form-label frm-label">Password</label>
+                <input 
+                  type="password" 
+                  class="form-control frm-input" 
+                  id="password" 
+                  name="password" 
+                  required>
+              </div>
+              
+              <!-- Remember Me & Reset Password -->
               <div class="col-12 d-flex justify-content-between">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -33,21 +48,25 @@
                   <a class="pswrdrst" href="password-reset.php">Reset Password</a>
                 </div>
               </div>
+              
+              <!-- Submit Button -->
               <div class="col-12">
                 <button type="submit" class="btn login-button w-100">Sign In</button>
               </div>
+              
+              <!-- Sign-Up & Go Back Links -->
               <div class="text-center">
-                  <p>
-                      Don't have an account 
-                      <a href="sign-up.php" class="fw-bold" style="text-decoration: none;">
-                          Sign up
-                      </a> here
-                  </p>
-                  <p>
-                      <a href="/01.HosPro" class="fw-bold" style="text-decoration: none;">
-                          Go Back
-                      </a>
-                  </p>
+                <p>
+                  Don't have an account? 
+                  <a href="sign-up.php" class="fw-bold" style="text-decoration: none;">
+                    Sign up
+                  </a> here
+                </p>
+                <p>
+                  <a href="/01.HosPro" class="fw-bold" style="text-decoration: none;">
+                    Go Back
+                  </a>
+                </p>
               </div>
             </form>
           </div>
@@ -59,31 +78,39 @@
 </html>
 
 <?php
-$login = 0;
-$invalid = 0;
+  // Check if the form is submitted
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      // Include database connection
+      require_once('../backend/config/config.php');
 
-// Check if the request method is POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $connection = new mysqli("localhost", "root", "", "thehosprodb2");
+      // Get user input
+      $emailOrUsername = mysqli_real_escape_string($connection, $_POST['emailOrUsername']);
+      $password = mysqli_real_escape_string($connection, $_POST['password']);
 
-    $user_name = $_POST['user_name'];
-    $user_password = $_POST['user_password'];
+      // Check if the email/username exists
+      $query = "SELECT * FROM user_details 
+                WHERE (user_email = '$emailOrUsername' OR user_name = '$emailOrUsername') 
+                AND user_password = '$password'";
+      $result = mysqli_query($connection, $query);
 
-    $sql = "SELECT * FROM `signup` WHERE user_name='$user_name' and user_password='$user_password' ";
+      if ($result && mysqli_num_rows($result) > 0) {
+          session_start();
+  
+          // Fetch user details
+          $user = mysqli_fetch_assoc($result);
+          
+          // Store user details in session
+          $_SESSION['user_id'] = $user['user_id'];
+          $_SESSION['user_name'] = $user['user_name'];
+          $_SESSION['user_email'] = $user['user_email'];
+          $_SESSION['user_mood'] = $user['user_password'];
 
-    $result = mysqli_query($con, $sql);
-    if ($result) {
-        $num = mysqli_num_rows($result);
-        if ($num > 0) {
-            $login = 1;
-            session_start();
-            $_SESSION['user_name'] = $user_name;
-            header('location:user-dash.php');
-            echo "connected";
-        } else {
-
-            $invalid = 1;
-        }
-    }
-}
+          // Redirect to dashboard or home
+          header("Location: user-dash.php");
+          exit();
+      } else {
+          // Invalid credentials
+          $error = "Invalid Email/Username or Password!";
+      }
+  }
 ?>

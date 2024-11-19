@@ -29,9 +29,9 @@ include('../backend/config/config.php');
                             <button class="nav-link" id="v-pills-general-tab" data-bs-toggle="pill" data-bs-target="#v-pills-general" type="button" role="tab" aria-controls="v-pills-general" aria-selected="false">
                                 General Info
                             </button>
-                            <!-- <button class="nav-link" id="v-pills-password-tab" data-bs-toggle="pill" data-bs-target="#v-pills-password" type="button" role="tab" aria-controls="v-pills-password" aria-selected="false">
+                            <button class="nav-link" id="v-pills-password-tab" data-bs-toggle="pill" data-bs-target="#v-pills-password" type="button" role="tab" aria-controls="v-pills-password" aria-selected="false">
                                 Password & Email
-                            </button> -->
+                            </button>
                             <button class="nav-link" id="v-pills-logo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-logo" type="button" role="tab" aria-controls="v-pills-logo" aria-selected="false">
                                 Logo Update
                             </button>
@@ -82,16 +82,11 @@ include('../backend/config/config.php');
                                     $hotel_name = $_POST['hotel_name'];
                                     $hotel_address = $_POST['hotel_address'];
                                     $hotel_phn = $_POST['hotel_phn'];
-                                    $hotel_email = $_POST['hotel_email'];
-                                    $admin_password = $_POST['admin_password'];
 
-                                    // Update query
-                                    // $update_query = "UPDATE admin_details SET hotel_name='$hotel_name', hotel_address='$hotel_address', hotel_phn='$hotel_phn' WHERE id=$id";
-                                    $update_query = "UPDATE admin_details SET hotel_name='$hotel_name', hotel_address='$hotel_address', hotel_phn='$hotel_phn', hotel_email='$hotel_email', admin_password='$admin_password' WHERE id=$id";
+                                    $update_query = "UPDATE admin_details SET hotel_name='$hotel_name', hotel_address='$hotel_address', hotel_phn='$hotel_phn' WHERE id=$id";
 
                                     if (mysqli_query($connection, $update_query)) {
                                         echo "Record updated successfully!";
-                                        // echo "<script>alert('Record updated successfully!'); window.location.reload();</script>";
                                     } else {
                                         echo "Error updating record: " . mysqli_error($connection);
                                     }
@@ -107,29 +102,16 @@ include('../backend/config/config.php');
                                 <form method="POST" action="">
                                     <div class="mb-3">
                                         <label for="companyName" class="frm-label form-label">Company Name</label>
-                                        <!-- Pre-populating the company name from the database -->
                                         <input type="text" class="form-control frm-input" id="companyName" name="hotel_name" placeholder="Enter company name" value="<?php echo $row['hotel_name']; ?>">
                                     </div>
                                     <div class="mb-3">
                                         <label for="companyAddress" class="frm-label form-label">Address</label>
-                                        <!-- Pre-populating the company address from the database -->
                                         <input type="text" class="frm-input form-control" id="companyAddress" name="hotel_address" placeholder="Enter company address" value="<?php echo $row['hotel_address']; ?>">
                                     </div>
                                     <div class="mb-3">
                                         <label for="phoneNumber" class="frm-label form-label">Phone Number</label>
-                                        <!-- Pre-populating the phone number from the database -->
                                         <input type="text" class="frm-input form-control" id="phoneNumber" name="hotel_phn" placeholder="Enter phone number" value="<?php echo $row['hotel_phn']; ?>">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="adminEmail" class="frm-label form-label">Email</label>
-                                        <input type="email" class="frm-input form-control" id="adminEmail" name="hotel_email"  placeholder="Enter new email" value="<?php echo $row['hotel_email']; ?>">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="newPassword" class="frm-label form-label">New Password</label>
-                                        <input type="password" class="frm-input form-control" id="newPassword" name="admin_password" placeholder="Enter new password">
-                                    </div>
-                                    <!-- Hidden input to pass the company ID -->
-                                    <input type="hidden" name="id" value="1">
 
                                     <!-- Update Info button -->
                                     <button type="submit" name="update" class="btn btn-primary">Update Info</button>
@@ -138,28 +120,52 @@ include('../backend/config/config.php');
 
                             <!-- Password & Email Update Tab -->
 
-                            <!-- <div class="tab-pane p-2 fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab">
+                            <div class="tab-pane p-2 fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab">
                                 <h4>Update Password & Email</h4>
-                                <form>
-                                    <div class="mb-3">
+
+                                <?php
+                                if (isset($_POST['update'])) {
+                                    $id = $_POST['id'];
+                                    $hotel_email = $_POST['hotel_email'];
+                                    $admin_password = $_POST['admin_password'];
+
+                                    $update_query = "UPDATE admin_details SET hotel_email='$hotel_email', admin_password='$admin_password' WHERE id=$id";
+
+                                    if (mysqli_query($connection, $update_query)) {
+                                        echo "Record updated successfully!";
+                                    } else {
+                                        echo "Error updating record: " . mysqli_error($connection);
+                                    }
+                                }
+
+                                // Fetch the existing data from the database (assuming the ID is 1)
+                                $query = "SELECT * FROM admin_details WHERE id = 1";
+                                $result = mysqli_query($connection, $query);
+                                $row = mysqli_fetch_assoc($result);
+                                ?>
+
+
+                                <form method="post">
+                                <div class="mb-3">
                                         <label for="adminEmail" class="frm-label form-label">Email</label>
-                                        <input type="email" class="frm-input form-control" id="adminEmail" placeholder="Enter new email" value="HosPro24/7@gmail.com">
+                                        <input type="email" class="frm-input form-control" id="adminEmail" name="hotel_email"  placeholder="Enter new email" value="<?php echo $row['hotel_email']; ?>">
                                     </div>
                                     <div class="mb-3">
                                         <label for="newPassword" class="frm-label form-label">New Password</label>
-                                        <input type="password" class="frm-input form-control" id="newPassword" placeholder="Enter new password">
-                                    </div>
+                                        <input type="password" class="frm-input form-control" id="newPassword" name="admin_password" placeholder="Enter new password">
+                                    </div> 
                                     <div class="mb-3">
-                                        <label for="confirmPassword" class="frm-label form-label">Confirm Password</label>
-                                        <input type="password" class="frm-input form-control" id="confirmPassword" placeholder="Confirm new password">
-                                    </div>
+                                        <label for="cNewPassword" class="frm-label form-label">Confirm New Password</label>
+                                        <input type="password" class="frm-input form-control" id="cNewPassword" name="admin_password" placeholder="Enter new password">
+                                    </div> 
+                                    <!-- <button type="button" class="btn btn-primary" name="update">Update Password & Email</button> -->
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#checkPassModal">Update Password & Email</button>
                                 </form>
-                            </div> -->
+                            </div>
                             <!-- Logo Update Tab -->
                             <div class="tab-pane p-2 fade" id="v-pills-logo" role="tabpanel" aria-labelledby="v-pills-logo-tab">
                                 <h4>Update Logo</h4>
-                                <form>
+                                <form method="post">
                                     <div class="mb-3">
                                         <label for="logoUpload" class="frm-label form-label">Upload New Logo</label>
                                         <input type="file" class="frm-input form-control" id="logoUpload">
@@ -170,16 +176,39 @@ include('../backend/config/config.php');
                             <!-- Receptionist Info Tab -->
                             <div class="tab-pane p-2 fade" id="v-pills-receptionist" role="tabpanel" aria-labelledby="v-pills-receptionist-tab">
                                 <h4>Receptionist Info</h4>
+
+                                <?php
+                                if (isset($_POST['update'])) {
+                                    $id = $_POST['id'];
+                                    $receptionist_password = $_POST['receptionist_password'];
+
+                                    // Update query
+                                    $update_query = "UPDATE admin_details SET hotel_email='$hotel_email', receptionist_password='$receptionist_password' WHERE id=$id";
+
+                                    if (mysqli_query($connection, $update_query)) {
+                                        echo "Record updated successfully!";
+                                    } else {
+                                        echo "Error updating record: " . mysqli_error($connection);
+                                    }
+                                }
+
+                                // Fetch the existing data from the database (assuming the ID is 1)
+                                $query = "SELECT * FROM admin_details WHERE id = 1";
+                                $result = mysqli_query($connection, $query);
+                                $row = mysqli_fetch_assoc($result);
+                                ?>
+
                                 <!--name="receptionist_password" -->
-                                <form>
+                                <form method="post">
                                     <div class="mb-3">
                                         <label for="receptionistUsername" class="frm-label form-label">Receptionist Username</label>
                                         <input type="text" class="frm-input form-control" id="receptionistUsername" placeholder="Enter receptionist username">
                                     </div>
                                     <div class="mb-3">
                                         <label for="receptionistPassword" class="frm-label form-label">Receptionist Password</label>
-                                        <input type="password" class="frm-input form-control" id="receptionistPassword" placeholder="Enter receptionist password">
+                                        <input type="password" class="frm-input form-control" id="receptionistPassword" name="receptionist_password" placeholder="Enter receptionist password">
                                     </div>
+                                    <!-- <button type="button" class="btn btn-primary" name="update">Update Receptionist Info</button> -->
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#checkPassModal">Update Receptionist Info</button>
                                 </form>
                             </div>
