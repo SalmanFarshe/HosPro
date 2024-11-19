@@ -6,13 +6,14 @@
             <th>Name</th>
             <th>Position</th>
             <th>Email</th>
+            <th>Phone</th>
             <th>Salary</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         <?php
-        $conn = new mysqli("localhost", "root", "", "thehosprodb");
+        $conn = new mysqli("localhost", "root", "", "thehosprodb2");
         $sql = "SELECT * FROM employee_details";
         $result = $conn->query($sql);
         if (!$result) {
@@ -25,6 +26,8 @@
                 <td><?php echo $row['employee_full_name'] ?></td>
                 <td><?php echo $row['employee_role'] ?></td>
                 <td><?php echo $row['employee_email'] ?></td>
+                <td><?php echo $row['employee_phn'] ?></td>
+                <td><?php echo $row['empolyee_salary'] ?></td>
                 <td class='d-flex justify-content-between'>
                     <a href='edit.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-warning' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Edit</a>
                     <a href='delete.php?id=<?php echo $row['id'] ?>' type='button' class='btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Delete</a>

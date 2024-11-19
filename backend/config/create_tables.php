@@ -23,6 +23,7 @@
         employee_nid VARCHAR(20) UNIQUE,
         employee_dob DATE,
         employee_phn VARCHAR(15),
+        employee_salary INT,
         employee_role VARCHAR(50) DEFAULT 'receptionist'
     )";
     mysqli_query($connection, $employee_details_table);
@@ -60,7 +61,10 @@
         events_id VARCHAR(10) PRIMARY KEY,
         events_name VARCHAR(100) NOT NULL,
         event_date DATE NOT NULL,
-        event_amount DECIMAL(10, 2),
+        event_price INT,
+        event_category VARCHAR(20),
+        event_status VARCHAR(20),
+        event_description VARCHAR(100),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
     mysqli_query($connection, $events_details_table);

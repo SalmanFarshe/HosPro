@@ -1,0 +1,24 @@
+
+                                <?php
+                                // if (isset($_POST['update'])) {
+                                //     $id = $_POST['id'];  // Assuming the ID is passed through a hidden input field
+                                //     $hotel_name = $_POST['hotel_name'];
+                                //     $hotel_address = $_POST['hotel_address'];
+                                //     $hotel_phn = $_POST['hotel_phn'];
+
+                                //     // Update query
+                                //     $update_query = "UPDATE admin_details SET hotel_name='$hotel_name', hotel_address='$hotel_address', hotel_phn='$hotel_phn' WHERE id=$id";
+
+                                //     if (mysqli_query($connection, $update_query)) {
+                                //         echo "Record updated successfully! ";
+                                //         // echo "<script>alert('Record updated successfully!'); window.location.reload();</script>";
+                                //     } else {
+                                //         echo "Error updating record: " . mysqli_error($connection);
+                                //     }
+                                // }
+
+                                // // Fetch the existing data from the database (assuming the ID is 1)
+                                // $query = "SELECT * FROM admin_details WHERE id = 1";
+                                // $result = mysqli_query($connection, $query);
+                                // $row = mysqli_fetch_assoc($result);
+                                ?>

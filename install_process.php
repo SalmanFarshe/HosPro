@@ -18,7 +18,7 @@
             $target_file = $target_dir . basename($hotel_logo);
             if (move_uploaded_file($_FILES["hotel_logo"]["tmp_name"], $target_file)) {
                 $admin_password = $_POST["admin_password"];
-                $insert_installation_details = "INSERT INTO admin_details (hotel_name, hotel_logo, admin_password) VALUES ('$hotel_name', '$hotel_logo', '$admin_password')";
+                $insert_installation_details = "INSERT INTO admin_details (hotel_name, hotel_logo, hotel_email, hotel_address, hotel_phn, admin_password, receptionist_password, manager_password) VALUES ('$hotel_name', '$hotel_logo', '$hotel_email', '$hotel_address', '$hotel_phn', '$admin_password', '$receptionist_password', '$manager_password')";
                 mysqli_query($connection, $insert_installation_details);
             } else {
                 echo "Sorry, there was an error uploading your file.";

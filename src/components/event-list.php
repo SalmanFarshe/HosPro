@@ -8,13 +8,15 @@
                 <th>Event ID</th>
                 <th>Event Name</th>
                 <th>Event Date</th>
+                <th>Category</th>
+                <th>Event Status</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $sql = "SELECT * FROM events_details";
-            $result = mysqli_query($connection,$sql);
+            $list_events_query = "SELECT * FROM events_details";
+            $result = mysqli_query($connection,$list_events_query);
             if (!$result) {
                 die("Invalid query!");
             }
@@ -24,6 +26,8 @@
                     <th><?php echo $row['events_id'] ?></th>
                     <th><?php echo $row['events_name'] ?></th>
                     <td><?php echo $row['event_date'] ?></td>
+                    <td><?php echo $row['event_category'] ?></td>
+                    <td><?php echo $row['event_status'] ?></td>
                     <td class='d-flex justify-content-between'>
                         <!-- <a href='#' type='button' class='btn btn-sm btn-warning' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Edit</a>
                         <a href='#' type='button' class='btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#reviewUserModal'>Delete</a>
