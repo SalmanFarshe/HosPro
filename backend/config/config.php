@@ -2,9 +2,10 @@
 $server_name = 'localhost';
 $dbusername = 'root';
 $dbpassword = '';
-$dbname = 'hosprodb';
+$dbname = 'thehosprodb2';
 
-$connection = mysqli_connect($server_name, $dbusername, $dbpassword);
+global $connection;
+$connection= mysqli_connect($server_name, $dbusername, $dbpassword);
 if (!$connection) {
     die('Connection failed: ' . mysqli_connect_error());
 }

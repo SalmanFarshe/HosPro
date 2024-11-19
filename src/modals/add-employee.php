@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "thehosprodb2");
+$conn = new mysqli("localhost", "root", "", "thehosprodb");
 if (isset($_POST['submit'])) {
     $employee_full_name = $_POST['employee_full_name'];
     $employee_role = $_POST['employee_role'];

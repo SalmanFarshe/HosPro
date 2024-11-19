@@ -14,8 +14,8 @@
     <tbody>
         <?php
         $conn = new mysqli("localhost", "root", "", "thehosprodb2");
-        $list_employee_query = "SELECT * FROM employee_details";
-        $result = $conn->query($list_employee_query);
+        $sql = "SELECT * FROM employee_details";
+        $result = $conn->query($sql);
         if (!$result) {
             die("Invalid query!");
         }
@@ -38,7 +38,5 @@
         <?php
         }
         ?>
-
-
     </tbody>
 </table>

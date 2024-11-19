@@ -12,8 +12,8 @@
     <tbody>
         <?php
         $conn = new mysqli("localhost", "root", "", "thehosprodb2");
-        $list_user_query = "SELECT * FROM user_details";
-        $result = $conn->query($list_user_query);
+        $sql = "SELECT * FROM user_details";
+        $result = $conn->query($sql);
         if (!$result) {
             die("Invalid query!");
         }
