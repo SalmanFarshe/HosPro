@@ -52,4 +52,52 @@
     </div>
     <script src="../assets/js/app.js"></script>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const detailButtons = document.querySelectorAll(".details_btn");
+
+    detailButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const id = this.getAttribute("data-id");
+
+            // AJAX Request to fetch details
+            fetch(`../backend/controller/fetch_food_details.php?id=${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Populate modal with data
+                    document.getElementById("food_package_id").innerText = data.food_package_id;
+                    document.getElementById("food_package_name").innerText = data.food_package_name;
+                    document.getElementById("food_package_details").innerText = data.food_package_details;
+                    document.getElementById("food_package_price").innerText = `$${data.food_package_price}`;
+                    document.getElementById("food_package_availability").innerText = data.food_package_availability ? 'Available' : 'Unavailable';
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        });
+    });
+});
+$(document).on('click', '.edit_btn', function () {
+    const packageId = $(this).data('id');
+
+    // Make an AJAX request to fetch the data
+    $.ajax({
+        url: '../backend/controller/getFoodPackageDetails.php', // Create this PHP script
+        type: 'POST',
+        data: { id: packageId },
+        success: function (response) {
+            const data = JSON.parse(response);
+
+            // Populate the modal fields
+            $('#foodPackageId').val(data.food_package_id);
+            $('#foodPackageName').val(data.food_package_name);
+            $('#foodPackagePrice').val(data.food_package_price);
+            $('#foodAvailability').val(data.food_package_availability);
+            $('#foodPackageDescription').val(data.food_package_details);
+        },
+        error: function () {
+            alert('Failed to fetch package details!');
+        }
+    });
+});
+
+</script>
 </html>

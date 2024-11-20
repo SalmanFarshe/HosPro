@@ -1,3 +1,6 @@
+<?php
+    require_once("../backend/controller/user-mood.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +48,7 @@
                             </button>
                             <div class="nav-item-divider"></div>
 
-                            <a href="../index.php" class="dashboard-nav-item text-light" style="text-decoration: none;">
+                            <a href="user-log-out.php" class="dashboard-nav-item text-light" style="text-decoration: none;">
                                 <i class="fas fa-sign-out-alt"></i>
                                 Logout
                             </a>

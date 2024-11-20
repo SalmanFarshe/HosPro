@@ -31,19 +31,56 @@
     </div>
 </div>
 <?php
+    require_once("../backend/config/config.php"); // Adjust path if needed
+
     if (isset($_POST['submit_room_data'])) {
+        // Generate new ID
+        function generateID($table, $prefix, $id_column, $connection) {
+            $query = "SELECT MAX($id_column) AS last_id FROM $table";
+            $result = mysqli_query($connection, $query);
+
+            // Check if query succeeded
+            if (!$result) {
+                die("ID generation query failed: " . mysqli_error($connection));
+            }
+
+            $row = mysqli_fetch_assoc($result);
+
+            // If no ID exists, start from 1
+            $last_id = $row['last_id'] ?? null;
+            $new_number = $last_id ? intval(substr($last_id, strlen($prefix))) + 1 : 1;
+
+            // Generate ID with prefix and padded number
+            return $prefix . str_pad($new_number, 2, '0', STR_PAD_LEFT);
+        }
+
+        // Generate new room package ID
+        $new_room_id = generateID('room_package_details', 'PKG-', 'room_package_id', $connection);
+
+        // Collect form data
         $room_name = $_POST['room_name'];
         $room_price = $_POST['room_price'];
         $room_availability = $_POST['room_availability'];
         $room_description = $_POST['room_description'];
-        $add_room_query = "INSERT INTO `room_package_details`(`room_package_name`, `room_package_details`, `room_package_price`, `room_package_availability`) VALUES ( '$room_name', '$room_description', '$room_price', '$room_availability')";
+
+        // Insert query
+        $add_room_query = "
+            INSERT INTO room_package_details 
+            (room_package_id, room_package_name, room_package_details, room_package_price, room_package_availability) 
+            VALUES 
+            ('$new_room_id', '$room_name', '$room_description', '$room_price', '$room_availability')";
+
+        // Execute query
         $result = mysqli_query($connection, $add_room_query);
-        if(!$result){
-         die("Query failed: " . mysqli_error($connection));
+
+        // Error handling
+        if (!$result) {
+            die("Query failed: " . mysqli_error($connection));
         }
-        if(!$connection)
-        {
-            echo "connec error";
+
+        // Connection error handling
+        if (!$connection) {
+            echo "Connection error";
         }
     }
 ?>

@@ -65,17 +65,19 @@
     )";
     mysqli_query($connection, $events_details_table);
 
-    // Function to generate prefixed IDs
-    function generateID($table, $prefix, $id_column, $connection) {
-        $query = "SELECT MAX($id_column) AS last_id FROM $table";
-        $result = mysqli_query($connection, $query);
-        $row = mysqli_fetch_assoc($result);
+function generateID($table, $prefix, $id_column, $connection) {
+    $query = "SELECT MAX($id_column) AS last_id FROM $table";
+    $result = mysqli_query($connection, $query);
+    $row = mysqli_fetch_assoc($result);
 
-        $last_id = $row['last_id'] ?? null;
-        $new_id = $last_id ? intval(substr($last_id, strlen($prefix))) + 1 : 1;
+    // If no ID exists, start from 1
+    $last_id = $row['last_id'] ?? null;
+    $new_number = $last_id ? intval(substr($last_id, strlen($prefix))) + 1 : 1;
 
-        return $prefix . str_pad($new_id, 2, '0', STR_PAD_LEFT);
-    }
+    // Generate ID with prefix and padded number
+    return $prefix . str_pad($new_number, 2, '0', STR_PAD_LEFT);
+}
+
 
     // Insert example data into room_details
     $new_room_id = generateID('room_details', 'RM-', 'room_id', $connection);

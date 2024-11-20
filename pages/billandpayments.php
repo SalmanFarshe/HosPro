@@ -50,13 +50,13 @@
                         </nav>
                     </div>
                     <!-- payments chart -->
-                    <div class="col-sm-12 col-lg-4">
+                    <!-- <div class="col-sm-12 col-lg-4">
                         <div class="col">
-                            <div class="card-bg-glass mb-3 p-3">
-                                <canvas id="myBarChart" width="400" height="350"></canvas>
-                            </div>
+                            <div class="card-bg-glass mb-3 p-3"> -->
+                                <!-- <canvas id="myBarChart" width="400" height="350"></canvas> -->
+                            <!-- </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <!-- bills list -->
@@ -94,14 +94,14 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-12 col-lg-4">
+                    <!-- <div class="col-sm-12 col-lg-4">
                         <div class="col">
-                            <div class="card-bg-glass my-3">
+                            <div class="card-bg-glass my-3"> -->
                                 <!-- Pie chart will be rendered on this canvas -->
-                                <canvas id="myPieChart" class="card-img-top p-2" width="400" height="350"></canvas>
+                                <!-- <canvas id="myPieChart" class="card-img-top p-2" width="400" height="350"></canvas>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
