@@ -15,23 +15,24 @@
     <div class="dashboard">
         <?php require_once('../src/components/sidenav.php'); ?>
         <div class="dashboard-app">
-            <!-- Payments list  -->             
+            <!-- Payments list  --> 
+             <h1 class="display-4">Total Costing</h1>            
                 <!-- bills list -->
                 <div class="row mt-5">
-                    <div class="col-sm-12 col-lg-8">
+                    <div class="col-sm-12 col-lg-12">
                         <!-- search bills -->
-                        <form class="" action="your-server-side-script" method="GET">
+                        <!-- <form class="" action="your-server-side-script" method="GET">
                             <label for="search">Search all bills:</label>
                             <br>
                             <input type="text" class="search-bill" id="search" name="search" value="">
                             <input type="submit" value="Search" class="button">
-                        </form>
+                        </form> -->
                         <div class="table-container">
                             <!-- bills table -->
                             <?php require_once("../src/components/list-cost.php"); ?>
                         </div>
                         <!-- bills pagination -->
-                        <nav aria-label="...">
+                        <!-- <nav aria-label="...">
                             <ul class="pagination">
                                 <li class="page-item">
                                 <a class="page-link text-white bg-glass" href="#" aria-label="Previous">
@@ -47,16 +48,16 @@
                                 </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> -->
                     </div>
-                    <div class="col-sm-12 col-lg-4">
+                    <!-- <div class="col-sm-12 col-lg-4">
                         <div class="col">
                             <div class="card-bg-glass my-3">
-                                <!-- Pie chart will be rendered on this canvas -->
+                                // Pie chart will be rendered on this canvas 
                                 <canvas id="myPieChart" class="card-img-top p-2" width="400" height="250"></canvas>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
         </div>
     </div>

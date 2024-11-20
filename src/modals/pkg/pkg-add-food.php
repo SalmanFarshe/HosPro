@@ -31,15 +31,42 @@
     </div>
 </div>
 <?php
+    require_once("../backend/config/config.php"); // Adjust the path if needed
+
     if (isset($_POST['foodDataSubmit'])) {
+        // Generate new ID
+        function generateID($table, $prefix, $id_column, $connection) {
+            $query = "SELECT MAX($id_column) AS last_id FROM $table";
+            $result = mysqli_query($connection, $query);
+            $row = mysqli_fetch_assoc($result);
+
+            // If no ID exists, start from 1
+            $last_id = $row['last_id'] ?? null;
+            $new_number = $last_id ? intval(substr($last_id, strlen($prefix))) + 1 : 1;
+
+            // Generate ID with prefix and padded number
+            return $prefix . str_pad($new_number, 2, '0', STR_PAD_LEFT);
+        }
+        $new_food_id = generateID('food_package_details', 'FD-', 'food_package_id', $connection);
+        // Collect form data
         $food_name = $_POST['foodName'];
         $food_price = $_POST['foodPrice'];
         $food_availability = $_POST['foodAvailability'];
         $food_description = $_POST['foodDescription'];
-        $add_food_query = "INSERT INTO `food_package_details`(`food_package_name`, `food_package_details`, `food_package_price`, `food_package_availability`) VALUES ( '$food_name', '$food_price', '$food_availability', '$food_description' )";
+
+        // Insert query
+        $add_food_query = "
+            INSERT INTO food_package_details 
+            (food_package_id, food_package_name, food_package_details, food_package_type, food_package_price, food_package_availability) 
+            VALUES 
+            ('$new_food_id', '$food_name', '$food_description', 'Default', '$food_price', '$food_availability')";
+
+        // Execute query
         $result = mysqli_query($connection, $add_food_query);
-        if(!$result){
-         die("Query failed: " . mysqli_error($connection));
+
+        // Error handling
+        if (!$result) {
+            die("Query failed: " . mysqli_error($connection));
         }
     }
 ?>

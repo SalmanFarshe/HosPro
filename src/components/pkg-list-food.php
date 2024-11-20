@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <?php
-            $list_food_package_details = "SELECT * FROM food_package_details";
+            $list_food_package_details = "SELECT * FROM food_package_details ORDER BY food_package_id ASC";
             $result = mysqli_query($connection,$list_food_package_details);
             if (!$result) {
                 die("Invalid query!");
@@ -25,8 +25,14 @@
                     <td><?php echo $row['food_package_price'] ?></td>
                     <td><?php echo $row['food_package_availability'] ?></td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#viewRoomModal">Details</a>
-                        <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editRoomModal">Edit</a>
+                        <a href="#" 
+                        class="btn btn-sm btn-info details_btn" 
+                        data-id="<?php echo $row['food_package_id']; ?>" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#viewFoodModal">Details</a>
+                        
+                        <a href="#" class="btn btn-sm btn-warning edit_btn" data-id="<?php echo $row['food_package_id']; ?>" data-bs-toggle="modal" data-bs-target="#editFoodModal">Edit</a>
+                        
                         <a href="#" class="btn btn-sm btn-danger delete_btn" data-id="<?php echo $row['food_package_id']; ?>" data-bs-toggle="modal" data-bs-target="#checkPassModal">Delete</a>
                     </td>        
                 </tr>
