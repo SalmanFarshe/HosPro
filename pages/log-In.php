@@ -16,27 +16,15 @@
             <form class="row g-3" action="log-in.php" method="post">
               <!-- Email/Username -->
               <div class="col-12">
-                <label for="emailOrUsername" class="form-label frm-label">Email / Username</label>
-                <input 
-                  type="text" 
-                  class="form-control frm-input" 
-                  id="emailOrUsername" 
-                  name="emailOrUsername" 
-                  required>
+                <label for="inputEmail4" class="form-label frm-label">Username</label>
+                <input type="text" name="user_name" class="form-control frm-input" id="inputEmail4" required>
               </div>
               
               <!-- Password -->
               <div class="col-12">
-                <label for="password" class="form-label frm-label">Password</label>
-                <input 
-                  type="password" 
-                  class="form-control frm-input" 
-                  id="password" 
-                  name="password" 
-                  required>
-              </div>
-              
-              <!-- Remember Me & Reset Password -->
+                <label for="inputPassword4" class="form-label frm-label">Password</label>
+                <input type="password" name="user_password" class="form-control frm-input" id="inputPassword4" required>
+              </div>                
               <div class="col-12 d-flex justify-content-between">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -78,39 +66,31 @@
 </html>
 
 <?php
-  // Check if the form is submitted
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // Include database connection
-      require_once('../backend/config/config.php');
+$login = 0;
+$invalid = 0;
 
-      // Get user input
-      $emailOrUsername = mysqli_real_escape_string($connection, $_POST['emailOrUsername']);
-      $password = mysqli_real_escape_string($connection, $_POST['password']);
+// Check if the request method is POST
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $connection = new mysqli("localhost", "root", "", "hosprodb");
 
-      // Check if the email/username exists
-      $query = "SELECT * FROM user_details 
-                WHERE (user_email = '$emailOrUsername' OR user_name = '$emailOrUsername') 
-                AND user_password = '$password'";
-      $result = mysqli_query($connection, $query);
+    $user_name = $_POST['user_name'];
+    $user_password = $_POST['user_password'];
 
-      if ($result && mysqli_num_rows($result) > 0) {
-          session_start();
-  
-          // Fetch user details
-          $user = mysqli_fetch_assoc($result);
-          
-          // Store user details in session
-          $_SESSION['user_id'] = $user['user_id'];
-          $_SESSION['user_name'] = $user['user_name'];
-          $_SESSION['user_email'] = $user['user_email'];
-          $_SESSION['user_mood'] = $user['user_password'];
+    $sql = "SELECT * FROM `user_details` WHERE user_name='$user_name' and user_password='$user_password' ";
 
-          // Redirect to dashboard or home
-          header("Location: user-dash.php");
-          exit();
-      } else {
-          // Invalid credentials
-          $error = "Invalid Email/Username or Password!";
-      }
-  }
+    $result = mysqli_query($con, $sql);
+    if ($result) {
+        $num = mysqli_num_rows($result);
+        if ($num > 0) {
+            $login = 1;
+            session_start();
+            $_SESSION['user_name'] = $user_name;
+            header('location:user-dash.php');
+            echo "connected";
+        } else {
+
+            $invalid = 1;
+        }
+    }
+}
 ?>

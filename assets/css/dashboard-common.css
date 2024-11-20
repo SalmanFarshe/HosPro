@@ -1,7 +1,7 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 120vh;
   background-color: rgba(3, 2, 3, 0.781);
 }
 .dashboard-app {

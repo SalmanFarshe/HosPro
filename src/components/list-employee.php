@@ -1,4 +1,3 @@
-
 <table class="table card-bg-glass">
     <thead>
         <tr>
@@ -6,7 +5,6 @@
             <th>Name</th>
             <th>Position</th>
             <th>Email</th>
-            <th>Phone</th>
             <th>Salary</th>
             <th>Actions</th>
         </tr>

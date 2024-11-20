@@ -1,8 +1,9 @@
 <?php
-    require_once("../backend/controller/user-mood.php");
+require_once("../backend/controller/user-mood.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/billandpayment.css">
     <link rel="stylesheet" href="../assets/css/dash.css">
 </head>
+
 <body>
     <div class="dashboard align-items-center justify-content-center">
         <div>
@@ -129,12 +131,32 @@
                                 aria-labelledby="v-pills-bookings-tab">
                                 <h4>My Bookings</h4>
                                 <!-- search payments -->
-                                <form class="" action="your-server-side-script" method="GET">
+                                <!-- <form class="" action="your-server-side-script" method="GET">
                                     <label for="search">Search All the payments:</label>
                                     <br>
                                     <input type="text" class="search-pmnt" id="search" name="search" value="">
                                     <input type="submit" class="button" value="Search">
-                                </form>
+                                </form> -->
+
+                                <div class="row mb-4 align-items-center justify-content-between">
+                                    <div class="col-md-5">
+                                        <select class="form-select select-pos" id="filterPosition">
+                                            <option selected>Filter by All Bookings</option>
+                                            <option value="older">Older</option>
+                                            <option value="newer">Newer</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control search-emp" placeholder="Search User" id="searchUser">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <!-- <button type="button" class="button float-end">
+                                            Add New Booking
+                                        </button> -->
+                                        <a href="Booking.php" type="button">Add New Booking</a>
+                                    </div>
+                                </div>
                                 <!-- payments table -->
                                 <div class="table-responsive">
                                     <?php require_once("../src/components/list-u-bookings.php"); ?>
@@ -202,4 +224,4 @@
     </div>
     <script src="../assets/js/chart.js"></script>
 </body
-</html>
+    </html>
